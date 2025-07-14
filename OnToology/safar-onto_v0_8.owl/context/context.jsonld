@@ -1,0 +1,1865 @@
+{
+  "@context" : {
+    "servesAsPrayerSpaceFor" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#servesAsPrayerSpaceFor",
+      "@type" : "@id"
+    },
+    "hasStandardsEvaluatedBy" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#hasStandardsEvaluatedBy",
+      "@type" : "@id"
+    },
+    "hasAllergenInfo" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#hasAllergenInfo",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "isAdministeredBy" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#isAdministeredBy",
+      "@type" : "@id"
+    },
+    "hasSpecialOffers" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#hasSpecialOffers",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "hasManufacturer" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#hasManufacturer",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "hasPackaging" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#hasPackaging",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "hasTransportCapacity" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#hasTransportCapacity",
+      "@type" : "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "offersHalalMenuTo" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#offersHalalMenuTo",
+      "@type" : "@id"
+    },
+    "hasStockStatus" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#hasStockStatus",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "browsesHalalMenuFrom" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#browsesHalalMenuFrom",
+      "@type" : "@id"
+    },
+    "customizesServiceFor" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#customizesServiceFor",
+      "@type" : "@id"
+    },
+    "hasEstablishmentDate" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#hasEstablishmentDate",
+      "@type" : "http://www.w3.org/2001/XMLSchema#date"
+    },
+    "HalalFood" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#HalalFood"
+    },
+    "receivesAirportServiceFrom" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#receivesAirportServiceFrom",
+      "@type" : "@id"
+    },
+    "enforcesEthics" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#enforcesEthics",
+      "@type" : "@id"
+    },
+    "hasRatings" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#hasRatings",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "hasNutritionalInfo" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#hasNutritionalInfo",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "hasInsurancePolicy" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#hasInsurancePolicy",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "isWheelchairAccessible" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#isWheelchairAccessible",
+      "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "hasRating" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#hasRating",
+      "@type" : "http://www.w3.org/2001/XMLSchema#decimal"
+    },
+    "hasLanguagesSpoken" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#hasLanguagesSpoken",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "HalalTourOperator" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#HalalTourOperator"
+    },
+    "HalalTourismManagement" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#HalalTourismManagement"
+    },
+    "IslamicLifestyle" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#IslamicLifestyle"
+    },
+    "hasVendor" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#hasVendor",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "hasHalalCertificationBody" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#hasHalalCertificationBody",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "hasFacilitiesAuditedBy" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#hasFacilitiesAuditedBy",
+      "@type" : "@id"
+    },
+    "assignsStaffTo" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#assignsStaffTo",
+      "@type" : "@id"
+    },
+    "belongsToCategory" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#belongsToCategory",
+      "@type" : "@id"
+    },
+    "providesAirportServiceTo" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#providesAirportServiceTo",
+      "@type" : "@id"
+    },
+    "hasCapacity" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#hasCapacity",
+      "@type" : "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "hostsReligiousActivity" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#hostsReligiousActivity",
+      "@type" : "@id"
+    },
+    "hasCommunityInvolvement" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#hasCommunityInvolvement",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "hasSecondaryCategories" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#hasSecondaryCategories",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "hasOriginalProductId" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#hasOriginalProductId",
+      "@type" : "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "hasHalalProductsVariety" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#hasHalalProductsVariety",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "offersServices" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#offersServices",
+      "@type" : "@id"
+    },
+    "manages" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#manages",
+      "@type" : "@id"
+    },
+    "HalalCosmetics" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#HalalCosmetics"
+    },
+    "hasFrozenFoods" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#hasFrozenFoods",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "facilitatesTravel" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#facilitatesTravel",
+      "@type" : "@id"
+    },
+    "hasCuisineType" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#hasCuisineType",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "Country" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#Country"
+    },
+    "HalalAccessories" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#HalalAccessories"
+    },
+    "hasAvailability" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#hasAvailability",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "sellsProduct" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#sellsProduct",
+      "@type" : "@id"
+    },
+    "IslamicHeritageSites" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#IslamicHeritageSites"
+    },
+    "facilitatesWorship" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#facilitatesWorship",
+      "@type" : "@id"
+    },
+    "hasSeasonalAvailability" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#hasSeasonalAvailability",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "facilitates" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#facilitates",
+      "@type" : "@id"
+    },
+    "hasLocationTrackedBy" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#hasLocationTrackedBy",
+      "@type" : "@id"
+    },
+    "usesGenderSegregatedArea" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#usesGenderSegregatedArea",
+      "@type" : "@id"
+    },
+    "hasProductType" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#hasProductType",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "operates" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#operates",
+      "@type" : "@id"
+    },
+    "hasComplementaryProducts" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#hasComplementaryProducts",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "hasCheckInOutTimes" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#hasCheckInOutTimes",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "providesGroundTransportTo" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#providesGroundTransportTo",
+      "@type" : "@id"
+    },
+    "hasSeasonality" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#hasSeasonality",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "hasNearbyAttractions" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#hasNearbyAttractions",
+      "@type" : "@id"
+    },
+    "Thing" : {
+      "@id" : "http://www.w3.org/2002/07/owl#Thing"
+    },
+    "maintainsQualityOf" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#maintainsQualityOf",
+      "@type" : "@id"
+    },
+    "HalalClothing" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#HalalClothing"
+    },
+    "maintainsSoftwareFor" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#maintainsSoftwareFor",
+      "@type" : "@id"
+    },
+    "designsPackageFor" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#designsPackageFor",
+      "@type" : "@id"
+    },
+    "InformationAndTechnology" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#InformationAndTechnology"
+    },
+    "receivesDigitalSupportFrom" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#receivesDigitalSupportFrom",
+      "@type" : "@id"
+    },
+    "hasNearbyRestaurants" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#hasNearbyRestaurants",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "hasAppVersion" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#hasAppVersion",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "hasRoomCount" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#hasRoomCount",
+      "@type" : "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "hasGenderSegregatedAreaFor" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#hasGenderSegregatedAreaFor",
+      "@type" : "@id"
+    },
+    "hasExpiryDate" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#hasExpiryDate",
+      "@type" : "http://www.w3.org/2001/XMLSchema#date"
+    },
+    "hasTypeOfMosque" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#hasTypeOfMosque",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "visits" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#visits",
+      "@type" : "@id"
+    },
+    "HalalTourismActivities" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#HalalTourismActivities"
+    },
+    "IslamicEthicalAndCultural" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#IslamicEthicalAndCultural"
+    },
+    "operatesFacilityAt" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#operatesFacilityAt",
+      "@type" : "@id"
+    },
+    "minCardinality" : {
+      "@id" : "http://www.w3.org/2002/07/owl#minCardinality"
+    },
+    "hasWebsite" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#hasWebsite",
+      "@type" : "http://www.w3.org/2001/XMLSchema#anyURI"
+    },
+    "MuslimTourists" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#MuslimTourists"
+    },
+    "hasName" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#hasName",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "hasTransportManagedBy" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#hasTransportManagedBy",
+      "@type" : "@id"
+    },
+    "hasAccessibilityFeatures" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#hasAccessibilityFeatures",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "hasFeature" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#hasFeature",
+      "@type" : "@id"
+    },
+    "hasAccessibility" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#hasAccessibility",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "Tourists" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#Tourists"
+    },
+    "hasMeatAndPoultry" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#hasMeatAndPoultry",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "availableAt" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#availableAt",
+      "@type" : "@id"
+    },
+    "DestinationsAndAttractions" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#DestinationsAndAttractions"
+    },
+    "hasInternationalFoods" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#hasInternationalFoods",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "hasBulkBuyingOptions" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#hasBulkBuyingOptions",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "hasReviews" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#hasReviews",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "MuslimFriendlyTouristDestinations" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#MuslimFriendlyTouristDestinations"
+    },
+    "hasSimilarProducts" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#hasSimilarProducts",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "hasWudhuFacility" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#hasWudhuFacility",
+      "@type" : "@id"
+    },
+    "hasEventOrganizedBy" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#hasEventOrganizedBy",
+      "@type" : "@id"
+    },
+    "hasTransferArrangedBy" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#hasTransferArrangedBy",
+      "@type" : "@id"
+    },
+    "hasSeasonalProducts" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#hasSeasonalProducts",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "hasCertificationDate" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#hasCertificationDate",
+      "@type" : "http://www.w3.org/2001/XMLSchema#date"
+    },
+    "hasRegistrationDeadline" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#hasRegistrationDeadline",
+      "@type" : "http://www.w3.org/2001/XMLSchema#date"
+    },
+    "hasReservationInfo" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#hasReservationInfo",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "promotesIslamicCultureAt" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#promotesIslamicCultureAt",
+      "@type" : "@id"
+    },
+    "hasNumberOfReviews" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#hasNumberOfReviews",
+      "@type" : "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "administers" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#administers",
+      "@type" : "@id"
+    },
+    "processesReservationFor" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#processesReservationFor",
+      "@type" : "@id"
+    },
+    "hasCapacityMale" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#hasCapacityMale",
+      "@type" : "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "AttractionOperators" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#AttractionOperators"
+    },
+    "hasPaymentMethods" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#hasPaymentMethods",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "assistsIn" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#assistsIn",
+      "@type" : "@id"
+    },
+    "hasExperienceTailoredBy" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#hasExperienceTailoredBy",
+      "@type" : "@id"
+    },
+    "hasShariahComplianceLevel" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#hasShariahComplianceLevel",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "hasComplianceAssessedBy" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#hasComplianceAssessedBy",
+      "@type" : "@id"
+    },
+    "hasEventDate" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#hasEventDate",
+      "@type" : "http://www.w3.org/2001/XMLSchema#date"
+    },
+    "SustainableHalalTourismPractices" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#SustainableHalalTourismPractices"
+    },
+    "MuslimFriendlyRestaurants" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#MuslimFriendlyRestaurants"
+    },
+    "hasLanguagesAvailable" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#hasLanguagesAvailable",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "manufacturedBy" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#manufacturedBy",
+      "@type" : "@id"
+    },
+    "hasCompanyRegNumber" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#hasCompanyRegNumber",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "hasCulturalSignificance" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#hasCulturalSignificance",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "hasAddress" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#hasAddress",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "hasCurrency" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#hasCurrency",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "receivesAvailabilityFrom" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#receivesAvailabilityFrom",
+      "@type" : "@id"
+    },
+    "coordinatesActivityWith" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#coordinatesActivityWith",
+      "@type" : "@id"
+    },
+    "hasFlightNumber" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#hasFlightNumber",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "hasExtractionTimestamp" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#hasExtractionTimestamp",
+      "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "hasOriginalDescription" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#hasOriginalDescription",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "hasHeritagePreservedBy" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#hasHeritagePreservedBy",
+      "@type" : "@id"
+    },
+    "caterToNeeds" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#caterToNeeds",
+      "@type" : "@id"
+    },
+    "provides" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#provides",
+      "@type" : "@id"
+    },
+    "hasDairyProducts" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#hasDairyProducts",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "hasPrayerSpace" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#hasPrayerSpace",
+      "@type" : "@id"
+    },
+    "hasOriginalAddress" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#hasOriginalAddress",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "hasMinimumOrderQuantity" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#hasMinimumOrderQuantity",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "hasClothingType" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#hasClothingType",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "HalalFriendlyDestinations" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#HalalFriendlyDestinations"
+    },
+    "contains" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#contains",
+      "@type" : "@id"
+    },
+    "tailorsExperienceFor" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#tailorsExperienceFor",
+      "@type" : "@id"
+    },
+    "hasHalalMeatSelection" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#hasHalalMeatSelection",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "providedBy" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#providedBy",
+      "@type" : "@id"
+    },
+    "TransportationProviders" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#TransportationProviders"
+    },
+    "hasFoundingYear" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#hasFoundingYear",
+      "@type" : "http://www.w3.org/2001/XMLSchema#gYear"
+    },
+    "organizesEventFor" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#organizesEventFor",
+      "@type" : "@id"
+    },
+    "hasSpicesAndSeasonings" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#hasSpicesAndSeasonings",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "compliesWith" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#compliesWith",
+      "@type" : "@id"
+    },
+    "consumesHalalFoodFrom" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#consumesHalalFoodFrom",
+      "@type" : "@id"
+    },
+    "IslamicHospitality" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#IslamicHospitality"
+    },
+    "Destination" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#Destination"
+    },
+    "NonAlcoholicBeverages" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#NonAlcoholicBeverages"
+    },
+    "hasSoftwareMaintainedBy" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#hasSoftwareMaintainedBy",
+      "@type" : "@id"
+    },
+    "hasReligiousCompliance" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#hasReligiousCompliance",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "FacilitiesAndInfrastructures" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#FacilitiesAndInfrastructures"
+    },
+    "hasFaxNumber" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#hasFaxNumber",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "hasColor" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#hasColor",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "hasCancellationPolicy" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#hasCancellationPolicy",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "conductsReligiousActivityAt" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#conductsReligiousActivityAt",
+      "@type" : "@id"
+    },
+    "hasLastInspectionDate" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#hasLastInspectionDate",
+      "@type" : "http://www.w3.org/2001/XMLSchema#date"
+    },
+    "allocatesResourceTo" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#allocatesResourceTo",
+      "@type" : "@id"
+    },
+    "hasBookingManagedBy" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#hasBookingManagedBy",
+      "@type" : "@id"
+    },
+    "providesWomenOnlyServiceTo" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#providesWomenOnlyServiceTo",
+      "@type" : "@id"
+    },
+    "hasProductVariations" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#hasProductVariations",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "monitorsPerformanceOf" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#monitorsPerformanceOf",
+      "@type" : "@id"
+    },
+    "DestinationManagement" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#DestinationManagement"
+    },
+    "organizesPilgrimage" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#organizesPilgrimage",
+      "@type" : "@id"
+    },
+    "Shopping" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#Shopping"
+    },
+    "certifies" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#certifies",
+      "@type" : "@id"
+    },
+    "hasPolicyEnforcedBy" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#hasPolicyEnforcedBy",
+      "@type" : "@id"
+    },
+    "hasOriginalSourcePage" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#hasOriginalSourcePage",
+      "@type" : "http://www.w3.org/2001/XMLSchema#anyURI"
+    },
+    "hasNearbyStations" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#hasNearbyStations",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "promotesCulture" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#promotesCulture",
+      "@type" : "@id"
+    },
+    "hasHalalCertificationStatus" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#hasHalalCertificationStatus",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "Mosques" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#Mosques"
+    },
+    "supportsNeeds" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#supportsNeeds",
+      "@type" : "@id"
+    },
+    "hasInspectionConductedBy" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#hasInspectionConductedBy",
+      "@type" : "@id"
+    },
+    "hasQualityMaintainedBy" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#hasQualityMaintainedBy",
+      "@type" : "@id"
+    },
+    "hasOriginalIsHalalCertified" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#hasOriginalIsHalalCertified",
+      "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "hasLatitude" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#hasLatitude",
+      "@type" : "http://www.w3.org/2001/XMLSchema#decimal"
+    },
+    "hasPrayerSchedule" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#hasPrayerSchedule",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "providesLiveUpdateTo" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#providesLiveUpdateTo",
+      "@type" : "@id"
+    },
+    "hasServicesOffered" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#hasServicesOffered",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "hasStoreSize" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#hasStoreSize",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "booksServiceWith" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#booksServiceWith",
+      "@type" : "@id"
+    },
+    "hasStandardsRegulatedBy" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#hasStandardsRegulatedBy",
+      "@type" : "@id"
+    },
+    "PrayerRooms" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#PrayerRooms"
+    },
+    "RegulatoryBodies" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#RegulatoryBodies"
+    },
+    "hasBookingTrackedBy" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#hasBookingTrackedBy",
+      "@type" : "@id"
+    },
+    "hasOriginalUrl" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#hasOriginalUrl",
+      "@type" : "http://www.w3.org/2001/XMLSchema#anyURI"
+    },
+    "IslamicDressCode" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#IslamicDressCode"
+    },
+    "schedulesActivityFor" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#schedulesActivityFor",
+      "@type" : "@id"
+    },
+    "hasMenuItems" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#hasMenuItems",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "hasSimilarRestaurants" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#hasSimilarRestaurants",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "hasTypeOfStore" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#hasTypeOfStore",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "MuslimFriendlyVan" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#MuslimFriendlyVan"
+    },
+    "hasOriginalName" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#hasOriginalName",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "hasLanguages" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#hasLanguages",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "hasPackagedGoods" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#hasPackagedGoods",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "hasHalalFacilities" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#hasHalalFacilities",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "partnersWith" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#partnersWith",
+      "@type" : "@id"
+    },
+    "enforces" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#enforces",
+      "@type" : "@id"
+    },
+    "coordinatesFlightFor" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#coordinatesFlightFor",
+      "@type" : "@id"
+    },
+    "hasHalalMenuOptions" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#hasHalalMenuOptions",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "hasDistributor" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#hasDistributor",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "servesAsWudhuFacilityFor" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#servesAsWudhuFacilityFor",
+      "@type" : "@id"
+    },
+    "hasTimeZone" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#hasTimeZone",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "QiblaDirectionIndicators" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#QiblaDirectionIndicators"
+    },
+    "hasPhoneNumber" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#hasPhoneNumber",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "hasGender" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#hasGender",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "ServiceQuality" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#ServiceQuality"
+    },
+    "hasComplementaryProduct" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#hasComplementaryProduct",
+      "@type" : "@id"
+    },
+    "hasDiningOptions" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#hasDiningOptions",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "HalalSwimmingSuits" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#HalalSwimmingSuits"
+    },
+    "Stakeholders" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#Stakeholders"
+    },
+    "MuslimFriendlyHealthcareAndWellnessService" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#MuslimFriendlyHealthcareAndWellnessService"
+    },
+    "hasReservationConfirmedBy" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#hasReservationConfirmedBy",
+      "@type" : "@id"
+    },
+    "hasRetailLocations" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#hasRetailLocations",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "hasShippingInfo" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#hasShippingInfo",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "hasFacilities" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#hasFacilities",
+      "@type" : "@id"
+    },
+    "overseesCompliance" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#overseesCompliance",
+      "@type" : "@id"
+    },
+    "hasSpecialRequirements" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#hasSpecialRequirements",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "teachesIslamicHistoryTo" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#teachesIslamicHistoryTo",
+      "@type" : "@id"
+    },
+    "hasReligiousPracticesSupportedBy" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#hasReligiousPracticesSupportedBy",
+      "@type" : "@id"
+    },
+    "learnsIslamicHistoryFrom" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#learnsIslamicHistoryFrom",
+      "@type" : "@id"
+    },
+    "acceptsBookingFrom" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#acceptsBookingFrom",
+      "@type" : "@id"
+    },
+    "hasSourcingDetails" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#hasSourcingDetails",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "HalalFashion" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#HalalFashion"
+    },
+    "hasOriginalImageUrl" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#hasOriginalImageUrl",
+      "@type" : "http://www.w3.org/2001/XMLSchema#anyURI"
+    },
+    "hasOperatingDays" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#hasOperatingDays",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "hasOriginalCategories" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#hasOriginalCategories",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "receivesAuthorityFrom" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#receivesAuthorityFrom",
+      "@type" : "@id"
+    },
+    "hasSpecialties" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#hasSpecialties",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "verifies" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#verifies",
+      "@type" : "@id"
+    },
+    "receivesCustomizedServiceFrom" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#receivesCustomizedServiceFrom",
+      "@type" : "@id"
+    },
+    "hasProduct" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#hasProduct",
+      "@type" : "@id"
+    },
+    "hasSize" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#hasSize",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "hasHalalCertificationExpiry" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#hasHalalCertificationExpiry",
+      "@type" : "http://www.w3.org/2001/XMLSchema#date"
+    },
+    "hasFlightCoordinatedBy" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#hasFlightCoordinatedBy",
+      "@type" : "@id"
+    },
+    "MuslimFriendlyCruises" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#MuslimFriendlyCruises"
+    },
+    "hasStorageInstructions" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#hasStorageInstructions",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "hasParkingAvailability" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#hasParkingAvailability",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "governsOperationOf" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#governsOperationOf",
+      "@type" : "@id"
+    },
+    "providesIslamicEducationTo" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#providesIslamicEducationTo",
+      "@type" : "@id"
+    },
+    "hasDirections" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#hasDirections",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "hasServiceHours" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#hasServiceHours",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "grantsAccreditationTo" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#grantsAccreditationTo",
+      "@type" : "@id"
+    },
+    "MuslimFriendlyMobileApplications" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#MuslimFriendlyMobileApplications"
+    },
+    "FoodAndBeverageProviders" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#FoodAndBeverageProviders"
+    },
+    "hasQualityStandards" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#hasQualityStandards",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "MuslimFriendlyBus" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#MuslimFriendlyBus"
+    },
+    "partOf" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#partOf",
+      "@type" : "@id"
+    },
+    "hasMenuHighlights" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#hasMenuHighlights",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "collaboratesWith" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#collaboratesWith",
+      "@type" : "@id"
+    },
+    "WudhuFacilities" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#WudhuFacilities"
+    },
+    "hasOriginalCuisineType" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#hasOriginalCuisineType",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "hasTaxRegistrationNumber" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#hasTaxRegistrationNumber",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "maintainsHygieneAt" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#maintainsHygieneAt",
+      "@type" : "@id"
+    },
+    "providesAvailabilityTo" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#providesAvailabilityTo",
+      "@type" : "@id"
+    },
+    "hasSupplierInformation" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#hasSupplierInformation",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "providesDigitalSupportTo" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#providesDigitalSupportTo",
+      "@type" : "@id"
+    },
+    "hasSystemMonitoredBy" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#hasSystemMonitoredBy",
+      "@type" : "@id"
+    },
+    "arrangesTransferFor" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#arrangesTransferFor",
+      "@type" : "@id"
+    },
+    "allocatesRoomTo" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#allocatesRoomTo",
+      "@type" : "@id"
+    },
+    "enjoysRamadanMealFrom" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#enjoysRamadanMealFrom",
+      "@type" : "@id"
+    },
+    "HalalCertificationAuthorities" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#HalalCertificationAuthorities"
+    },
+    "hasAwards" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#hasAwards",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "receivesHalalCateringFrom" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#receivesHalalCateringFrom",
+      "@type" : "@id"
+    },
+    "hasCustomsInfo" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#hasCustomsInfo",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "supervisesOperationOf" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#supervisesOperationOf",
+      "@type" : "@id"
+    },
+    "hasProducts" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#hasProducts",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "usesMaintainedFacility" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#usesMaintainedFacility",
+      "@type" : "@id"
+    },
+    "auditsFacilitiesOf" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#auditsFacilitiesOf",
+      "@type" : "@id"
+    },
+    "TravelAndTransportation" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#TravelAndTransportation"
+    },
+    "hasDiscountRate" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#hasDiscountRate",
+      "@type" : "http://www.w3.org/2001/XMLSchema#decimal"
+    },
+    "MuslimFriendlyHotels" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#MuslimFriendlyHotels"
+    },
+    "AccommodationProviders" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#AccommodationProviders"
+    },
+    "hasLongitude" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#hasLongitude",
+      "@type" : "http://www.w3.org/2001/XMLSchema#decimal"
+    },
+    "hasGroupSize" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#hasGroupSize",
+      "@type" : "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "RegulationsAndCompliance" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#RegulationsAndCompliance"
+    },
+    "hasOnlineShopping" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#hasOnlineShopping"
+    },
+    "organizes" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#organizes",
+      "@type" : "@id"
+    },
+    "hasAccessoryType" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#hasAccessoryType",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "hasVehicleType" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#hasVehicleType",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "hasPrimaryCategory" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#hasPrimaryCategory",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "hasNearbyHalalStores" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#hasNearbyHalalStores",
+      "@type" : "@id"
+    },
+    "usesTransportRoute" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#usesTransportRoute",
+      "@type" : "@id"
+    },
+    "hasPackageCode" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#hasPackageCode",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "hasModestyLevel" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#hasModestyLevel",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "maintainsHalalKitchenAt" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#maintainsHalalKitchenAt",
+      "@type" : "@id"
+    },
+    "hasRefundPolicy" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#hasRefundPolicy",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "hasUsageInstructions" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#hasUsageInstructions",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "definition" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#definition"
+    },
+    "hasDietaryRestrictions" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#hasDietaryRestrictions",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "regulates" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#regulates",
+      "@type" : "@id"
+    },
+    "hasOpeningHours" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#hasOpeningHours",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "locatedInNeighborhood" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#locatedInNeighborhood",
+      "@type" : "@id"
+    },
+    "hasHalalServices" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#hasHalalServices",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "hasReviewScore" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#hasReviewScore",
+      "@type" : "http://www.w3.org/2001/XMLSchema#decimal"
+    },
+    "DestinationAttributes" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#DestinationAttributes"
+    },
+    "arranges" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#arranges",
+      "@type" : "@id"
+    },
+    "hasHalalCertificateNumber" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#hasHalalCertificateNumber",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "managesContentFor" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#managesContentFor",
+      "@type" : "@id"
+    },
+    "IslamicCulturalCenter" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#IslamicCulturalCenter"
+    },
+    "hasIngredients" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#hasIngredients",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "HalalTourismWebsites" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#HalalTourismWebsites"
+    },
+    "receivesResourceFrom" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#receivesResourceFrom",
+      "@type" : "@id"
+    },
+    "receivesGroundTransportFrom" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#receivesGroundTransportFrom",
+      "@type" : "@id"
+    },
+    "maintainsStandards" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#maintainsStandards",
+      "@type" : "@id"
+    },
+    "hasOperationSupervisedBy" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#hasOperationSupervisedBy",
+      "@type" : "@id"
+    },
+    "cooksHalalFoodFor" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#cooksHalalFoodFor",
+      "@type" : "@id"
+    },
+    "hasMinimumAge" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#hasMinimumAge",
+      "@type" : "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "hasQiblaDirection" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#hasQiblaDirection",
+      "@type" : "http://www.w3.org/2001/XMLSchema#decimal"
+    },
+    "hasDressCode" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#hasDressCode",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "regulatesStandardsFor" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#regulatesStandardsFor",
+      "@type" : "@id"
+    },
+    "managedBy" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#managedBy",
+      "@type" : "@id"
+    },
+    "caterTo" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#caterTo",
+      "@type" : "@id"
+    },
+    "operatesRouteFor" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#operatesRouteFor",
+      "@type" : "@id"
+    },
+    "hasSpecialFeatures" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#hasSpecialFeatures",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "hasPackageDesignedBy" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#hasPackageDesignedBy",
+      "@type" : "@id"
+    },
+    "enforcesPolicyAt" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#enforcesPolicyAt",
+      "@type" : "@id"
+    },
+    "adhereToStandards" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#adhereToStandards",
+      "@type" : "@id"
+    },
+    "hasCustomerService" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#hasCustomerService",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "hasActivityScheduledBy" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#hasActivityScheduledBy",
+      "@type" : "@id"
+    },
+    "hasExtractionSuccess" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#hasExtractionSuccess",
+      "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "HalalRetailOutlets" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#HalalRetailOutlets"
+    },
+    "HalalSpecialtyStores" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#HalalSpecialtyStores"
+    },
+    "hasBeverages" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#hasBeverages",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "ShariahCompliantHotels" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#ShariahCompliantHotels"
+    },
+    "providesCruiseServiceTo" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#providesCruiseServiceTo",
+      "@type" : "@id"
+    },
+    "hasCity" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#hasCity",
+      "@type" : "@id"
+    },
+    "hasGenderPolicy" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#hasGenderPolicy",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "ensuresQuality" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#ensuresQuality",
+      "@type" : "@id"
+    },
+    "evaluatesStandardsOf" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#evaluatesStandardsOf",
+      "@type" : "@id"
+    },
+    "hasSecurityFeatures" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#hasSecurityFeatures",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "receivesCruiseServiceFrom" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#receivesCruiseServiceFrom",
+      "@type" : "@id"
+    },
+    "targetsAudience" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#targetsAudience",
+      "@type" : "@id"
+    },
+    "hasComplianceOversightBy" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#hasComplianceOversightBy",
+      "@type" : "@id"
+    },
+    "hasLastRenovationDate" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#hasLastRenovationDate",
+      "@type" : "http://www.w3.org/2001/XMLSchema#date"
+    },
+    "hasCheckInTime" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#hasCheckInTime",
+      "@type" : "http://www.w3.org/2001/XMLSchema#time"
+    },
+    "uses" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#uses",
+      "@type" : "@id"
+    },
+    "supports" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#supports",
+      "@type" : "@id"
+    },
+    "hasContactInfo" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#hasContactInfo",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "implementsStandards" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#implementsStandards",
+      "@type" : "@id"
+    },
+    "confirmsReservationFor" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#confirmsReservationFor",
+      "@type" : "@id"
+    },
+    "hasContentManagedBy" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#hasContentManagedBy",
+      "@type" : "@id"
+    },
+    "hasAmenitiesList" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#hasAmenitiesList",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "suppliesTo" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#suppliesTo",
+      "@type" : "@id"
+    },
+    "dinesAt" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#dinesAt",
+      "@type" : "@id"
+    },
+    "hasAdditionalServices" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#hasAdditionalServices",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "handlesBookingVia" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#handlesBookingVia",
+      "@type" : "@id"
+    },
+    "hasEventCapacity" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#hasEventCapacity",
+      "@type" : "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "IslamicMuseum" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#IslamicMuseum"
+    },
+    "hasMaximumCapacity" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#hasMaximumCapacity",
+      "@type" : "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "servesArea" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#servesArea",
+      "@type" : "@id"
+    },
+    "hasPublicTransportAccess" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#hasPublicTransportAccess",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "hasDeliveryService" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#hasDeliveryService"
+    },
+    "manufacturesProduct" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#manufacturesProduct",
+      "@type" : "@id"
+    },
+    "locatedIn" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#locatedIn",
+      "@type" : "@id"
+    },
+    "hasLoyaltyPrograms" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#hasLoyaltyPrograms",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "hasNearbyTransportation" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#hasNearbyTransportation",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "hasFabricType" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#hasFabricType",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "hasWifiAvailability" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#hasWifiAvailability",
+      "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "hasLicenseNumber" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#hasLicenseNumber",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "hasAverageStayDuration" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#hasAverageStayDuration",
+      "@type" : "http://www.w3.org/2001/XMLSchema#duration"
+    },
+    "hasHalalCertificationAuthority" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#hasHalalCertificationAuthority",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "GamblingFreeEnvironments" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#GamblingFreeEnvironments"
+    },
+    "ServiceProviders" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#ServiceProviders"
+    },
+    "AlcoholFreeEnvironments" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#AlcoholFreeEnvironments"
+    },
+    "hasTypeOfRestaurant" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#hasTypeOfRestaurant",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "offersExperience" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#offersExperience",
+      "@type" : "@id"
+    },
+    "hasPrayerTimes" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#hasPrayerTimes",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "hasDimensions" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#hasDimensions",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "hasAdditionalDetails" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#hasAdditionalDetails",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "HalalTourism" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#HalalTourism"
+    },
+    "preservesHeritageAt" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#preservesHeritageAt",
+      "@type" : "@id"
+    },
+    "preserves" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#preserves",
+      "@type" : "@id"
+    },
+    "City" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#City"
+    },
+    "maintainsFacilityFor" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#maintainsFacilityFor",
+      "@type" : "@id"
+    },
+    "assessesComplianceOf" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#assessesComplianceOf",
+      "@type" : "@id"
+    },
+    "hasExportTimestamp" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#hasExportTimestamp",
+      "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "isAllocatedRoomBy" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#isAllocatedRoomBy",
+      "@type" : "@id"
+    },
+    "staysAt" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#staysAt",
+      "@type" : "@id"
+    },
+    "enjoysHalalBreakfastAt" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#enjoysHalalBreakfastAt",
+      "@type" : "@id"
+    },
+    "hasMaintenanceSchedule" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#hasMaintenanceSchedule",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "hasCustomerFeedback" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#hasCustomerFeedback",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "MuslimGenAlphaTravelers" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#MuslimGenAlphaTravelers"
+    },
+    "hasError" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#hasError",
+      "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "hasCertificationNumber" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#hasCertificationNumber",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "preparesRamadanMealFor" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#preparesRamadanMealFor",
+      "@type" : "@id"
+    },
+    "tracksLocationOf" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#tracksLocationOf",
+      "@type" : "@id"
+    },
+    "hasCountryOfOrigin" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#hasCountryOfOrigin",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "hasFreshProduce" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#hasFreshProduce",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "usesAmenity" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#usesAmenity",
+      "@type" : "@id"
+    },
+    "issues" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#issues",
+      "@type" : "@id"
+    },
+    "facilitatesBookingFor" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#facilitatesBookingFor",
+      "@type" : "@id"
+    },
+    "FoodAndBeverage" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#FoodAndBeverage"
+    },
+    "hasRoomTypes" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#hasRoomTypes",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "MuslimFriendlyGroundTransportation" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#MuslimFriendlyGroundTransportation"
+    },
+    "HalalCertifications" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#HalalCertifications"
+    },
+    "HalalTravelAgency" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#HalalTravelAgency"
+    },
+    "comment" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#comment"
+    },
+    "GenderSegregatedRecreationalFacilities" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#GenderSegregatedRecreationalFacilities"
+    },
+    "hasNearbyMosques" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#hasNearbyMosques",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "supportsReligiousPracticeOf" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#supportsReligiousPracticeOf",
+      "@type" : "@id"
+    },
+    "cooperatesWith" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#cooperatesWith",
+      "@type" : "@id"
+    },
+    "HalalProducts" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#HalalProducts"
+    },
+    "hasNeighborhood" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#hasNeighborhood",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "hasPriceRange" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#hasPriceRange",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "providesPrivacy" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#providesPrivacy",
+      "@type" : "@id"
+    },
+    "MuslimWomenTravelers" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#MuslimWomenTravelers"
+    },
+    "hasIslamicCulturePromotedBy" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#hasIslamicCulturePromotedBy",
+      "@type" : "@id"
+    },
+    "HalalStandards" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#HalalStandards"
+    },
+    "isGovernedBy" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#isGovernedBy",
+      "@type" : "@id"
+    },
+    "monitorsSystemFor" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#monitorsSystemFor",
+      "@type" : "@id"
+    },
+    "receivesIslamicEducationFrom" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#receivesIslamicEducationFrom",
+      "@type" : "@id"
+    },
+    "HalalCertifiedRestaurants" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#HalalCertifiedRestaurants"
+    },
+    "hasBrand" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#hasBrand",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "hasAmenity" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#hasAmenity",
+      "@type" : "@id"
+    },
+    "hasHalalKitchenMaintainedBy" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#hasHalalKitchenMaintainedBy",
+      "@type" : "@id"
+    },
+    "isAssignedTo" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#isAssignedTo",
+      "@type" : "@id"
+    },
+    "hasCulturalActivities" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#hasCulturalActivities",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "promotes" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#promotes",
+      "@type" : "@id"
+    },
+    "hasHalalSectionAvailability" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#hasHalalSectionAvailability"
+    },
+    "hasSocialMedia" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#hasSocialMedia",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "IslamicGovernanceInstitutions" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#IslamicGovernanceInstitutions"
+    },
+    "maintains" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#maintains",
+      "@type" : "@id"
+    },
+    "hasReservationProcessedBy" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#hasReservationProcessedBy",
+      "@type" : "@id"
+    },
+    "hasPerformanceMonitoredBy" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#hasPerformanceMonitoredBy",
+      "@type" : "@id"
+    },
+    "hasProductCode" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#hasProductCode",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "hasSimilarProduct" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#hasSimilarProduct",
+      "@type" : "@id"
+    },
+    "MuslimFriendlyAttractions" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#MuslimFriendlyAttractions"
+    },
+    "hasTermsAndConditions" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#hasTermsAndConditions",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "hasFacilityOperatedBy" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#hasFacilityOperatedBy",
+      "@type" : "@id"
+    },
+    "conductsInspectionOf" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#conductsInspectionOf",
+      "@type" : "@id"
+    },
+    "synchronizesDataWith" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#synchronizesDataWith",
+      "@type" : "@id"
+    },
+    "HalalSupermarkets" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#HalalSupermarkets"
+    },
+    "educatesAbout" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#educatesAbout",
+      "@type" : "@id"
+    },
+    "hasShelfLife" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#hasShelfLife",
+      "@type" : "http://www.w3.org/2001/XMLSchema#duration"
+    },
+    "hasEventDuration" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#hasEventDuration",
+      "@type" : "http://www.w3.org/2001/XMLSchema#duration"
+    },
+    "designedFor" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#designedFor",
+      "@type" : "@id"
+    },
+    "hasCertifications" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#hasCertifications",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "hasCheckOutTime" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#hasCheckOutTime",
+      "@type" : "http://www.w3.org/2001/XMLSchema#time"
+    },
+    "hasImportInfo" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#hasImportInfo",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "hasTourDuration" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#hasTourDuration",
+      "@type" : "http://www.w3.org/2001/XMLSchema#duration"
+    },
+    "hasPhotos" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#hasPhotos",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "GenderSegregatedAreas" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#GenderSegregatedAreas"
+    },
+    "hasDescription" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#hasDescription",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "delegatesAuthorityTo" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#delegatesAuthorityTo",
+      "@type" : "@id"
+    },
+    "tracksBookingFor" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#tracksBookingFor",
+      "@type" : "@id"
+    },
+    "designs" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#designs",
+      "@type" : "@id"
+    },
+    "receivesLiveUpdateFrom" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#receivesLiveUpdateFrom",
+      "@type" : "@id"
+    },
+    "hasStarRating" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#hasStarRating",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "hasTargetAudience" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#hasTargetAudience",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "MuslimMillennialTravelers" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#MuslimMillennialTravelers"
+    },
+    "advisesOn" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#advisesOn",
+      "@type" : "@id"
+    },
+    "catersToCustomers" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#catersToCustomers",
+      "@type" : "@id"
+    },
+    "receivesSupplyFrom" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#receivesSupplyFrom",
+      "@type" : "@id"
+    },
+    "providesGuidance" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#providesGuidance",
+      "@type" : "@id"
+    },
+    "Region" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#Region"
+    },
+    "hasHygieneMaintainedBy" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#hasHygieneMaintainedBy",
+      "@type" : "@id"
+    },
+    "hasOriginalImageAlt" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#hasOriginalImageAlt",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "HalalCertifiedHotels" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#HalalCertifiedHotels"
+    },
+    "MuslimFriendlyAirports" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#MuslimFriendlyAirports"
+    },
+    "managesBookingOf" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#managesBookingOf",
+      "@type" : "@id"
+    },
+    "receivesWomenOnlyServiceFrom" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#receivesWomenOnlyServiceFrom",
+      "@type" : "@id"
+    },
+    "hasWeight" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#hasWeight",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "hasAccreditationGrantedBy" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#hasAccreditationGrantedBy",
+      "@type" : "@id"
+    },
+    "MuslimFriendlyAirlines" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#MuslimFriendlyAirlines"
+    },
+    "sells" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#sells",
+      "@type" : "@id"
+    },
+    "DestinationManagementOrganizations" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#DestinationManagementOrganizations"
+    },
+    "implementsPractices" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#implementsPractices",
+      "@type" : "@id"
+    },
+    "hasHistoricalSignificance" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#hasHistoricalSignificance",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "hasOnlineAvailability" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#hasOnlineAvailability",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "Accommodation" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#Accommodation"
+    },
+    "anticipatesNeeds" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#anticipatesNeeds",
+      "@type" : "@id"
+    },
+    "hasHalalFoodAvailability" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#hasHalalFoodAvailability",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "managesTransportFor" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#managesTransportFor",
+      "@type" : "@id"
+    },
+    "hasCompetitorStores" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#hasCompetitorStores",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "hasEmergencyContact" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#hasEmergencyContact",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "hasStoreType" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#hasStoreType",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "providesAmenityFor" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#providesAmenityFor",
+      "@type" : "@id"
+    },
+    "MuslimGenZTravelers" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#MuslimGenZTravelers"
+    },
+    "PrayerFacilitiesAtDestinations" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#PrayerFacilitiesAtDestinations"
+    },
+    "servesHalalBreakfastTo" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#servesHalalBreakfastTo",
+      "@type" : "@id"
+    },
+    "ShariahLawCompliance" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#ShariahLawCompliance"
+    },
+    "hasCapacityFemale" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#hasCapacityFemale",
+      "@type" : "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "offers" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#offers",
+      "@type" : "@id"
+    },
+    "hasNearbyHotels" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#hasNearbyHotels",
+      "@type" : "@id"
+    },
+    "hasTypeOfHotel" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#hasTypeOfHotel",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "providesHalalCateringTo" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#providesHalalCateringTo",
+      "@type" : "@id"
+    },
+    "hasValidityPeriod" : {
+      "@id" : "http://www.semanticweb.org/halaltourism#hasValidityPeriod",
+      "@type" : "http://www.w3.org/2001/XMLSchema#duration"
+    }
+  }
+}
