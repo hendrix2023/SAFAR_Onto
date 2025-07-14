@@ -1,0 +1,3755 @@
+@prefix : <http://www.semanticweb.org/halaltourism#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.semanticweb.org/halaltourism#> .
+
+<http://www.semanticweb.org/halaltourism> rdf:type owl:Ontology .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://www.semanticweb.org/halaltourism#definition
+:definition rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2002/07/owl#minCardinality
+owl:minCardinality rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Datatypes
+#################################################################
+
+###  http://www.w3.org/2001/XMLSchema#date
+xsd:date rdf:type rdfs:Datatype .
+
+
+###  http://www.w3.org/2001/XMLSchema#duration
+xsd:duration rdf:type rdfs:Datatype .
+
+
+###  http://www.w3.org/2001/XMLSchema#gYear
+xsd:gYear rdf:type rdfs:Datatype .
+
+
+###  http://www.w3.org/2001/XMLSchema#time
+xsd:time rdf:type rdfs:Datatype .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.semanticweb.org/halaltourism#acceptsBookingFrom
+:acceptsBookingFrom rdf:type owl:ObjectProperty ;
+                    owl:inverseOf :booksServiceWith ;
+                    rdfs:domain :ServiceProviders ;
+                    rdfs:range :MuslimTourists ;
+                    rdfs:comment "Booking acceptance relationship" .
+
+
+###  http://www.semanticweb.org/halaltourism#adhereToStandards
+:adhereToStandards rdf:type owl:ObjectProperty ;
+                   rdfs:domain :ServiceProviders ;
+                   rdfs:range :HalalStandards ;
+                   rdfs:comment "Shows that ServiceProviders follow HalalStandards" .
+
+
+###  http://www.semanticweb.org/halaltourism#administers
+:administers rdf:type owl:ObjectProperty ;
+             owl:inverseOf :isAdministeredBy ;
+             rdf:type owl:FunctionalProperty ;
+             rdfs:domain :DestinationManagementOrganizations ;
+             rdfs:range :MuslimFriendlyTouristDestinations ;
+             rdfs:comment "Administrative relationship between management organizations and destinations" .
+
+
+###  http://www.semanticweb.org/halaltourism#advisesOn
+:advisesOn rdf:type owl:ObjectProperty ;
+           rdfs:domain :IslamicGovernanceInstitutions ;
+           rdfs:range :IslamicEthicalAndCultural ;
+           rdfs:comment "Shows how IslamicGovernanceInstitutions advise on IslamicEthicalAndCultural matters" .
+
+
+###  http://www.semanticweb.org/halaltourism#allocatesResourceTo
+:allocatesResourceTo rdf:type owl:ObjectProperty ;
+                     owl:inverseOf :receivesResourceFrom ;
+                     rdfs:domain :HalalTourismManagement ;
+                     rdfs:range :ServiceProviders ;
+                     rdfs:comment "Resource allocation relationship" .
+
+
+###  http://www.semanticweb.org/halaltourism#allocatesRoomTo
+:allocatesRoomTo rdf:type owl:ObjectProperty ;
+                 owl:inverseOf :isAllocatedRoomBy ;
+                 rdf:type owl:FunctionalProperty ;
+                 rdfs:domain :Accommodation ;
+                 rdfs:range :MuslimTourists ;
+                 rdfs:comment "Room allocation relationship" .
+
+
+###  http://www.semanticweb.org/halaltourism#anticipatesNeeds
+:anticipatesNeeds rdf:type owl:ObjectProperty ;
+                  rdfs:domain :HalalTourismManagement ;
+                  rdfs:range :MuslimGenAlphaTravelers ;
+                  rdfs:comment "Shows how HalalTourismManagement anticipates needs of MuslimGenAlphaTravelers" .
+
+
+###  http://www.semanticweb.org/halaltourism#arranges
+:arranges rdf:type owl:ObjectProperty ;
+          rdfs:domain :HalalTravelAgency ;
+          rdfs:range :HalalTourism ;
+          rdfs:comment "Connects HalalTravelAgency to the HalalTourism services they provide" .
+
+
+###  http://www.semanticweb.org/halaltourism#arrangesTransferFor
+:arrangesTransferFor rdf:type owl:ObjectProperty ;
+                     owl:inverseOf :hasTransferArrangedBy ;
+                     rdfs:domain :TransportationProviders ;
+                     rdfs:range :MuslimTourists ;
+                     rdfs:comment "Transfer arrangement relationship" .
+
+
+###  http://www.semanticweb.org/halaltourism#assessesComplianceOf
+:assessesComplianceOf rdf:type owl:ObjectProperty ;
+                      owl:inverseOf :hasComplianceAssessedBy ;
+                      rdfs:domain :HalalCertificationAuthorities ;
+                      rdfs:range :ServiceProviders ;
+                      rdfs:comment "Compliance assessment relationship" .
+
+
+###  http://www.semanticweb.org/halaltourism#assignsStaffTo
+:assignsStaffTo rdf:type owl:ObjectProperty ;
+                owl:inverseOf :isAssignedTo ;
+                rdfs:domain :ServiceProviders ;
+                rdfs:range :HalalTourismActivities ;
+                rdfs:comment "Staff assignment relationship" .
+
+
+###  http://www.semanticweb.org/halaltourism#assistsIn
+:assistsIn rdf:type owl:ObjectProperty ;
+           rdfs:domain :MuslimFriendlyMobileApplications ;
+           rdfs:range :HalalTourismActivities ;
+           rdfs:comment "Shows how MuslimFriendlyMobileApplications assist in HalalTourismActivities" .
+
+
+###  http://www.semanticweb.org/halaltourism#auditsFacilitiesOf
+:auditsFacilitiesOf rdf:type owl:ObjectProperty ;
+                    owl:inverseOf :hasFacilitiesAuditedBy ;
+                    rdfs:domain :HalalCertificationAuthorities ;
+                    rdfs:range :ServiceProviders ;
+                    rdfs:comment "Facility auditing relationship" .
+
+
+###  http://www.semanticweb.org/halaltourism#availableAt
+:availableAt rdf:type owl:ObjectProperty ;
+             owl:inverseOf :sellsProduct ;
+             rdfs:domain :HalalProducts ;
+             rdfs:range :HalalRetailOutlets ;
+             rdfs:comment "Links a product to the stores where it is available" ,
+                          "Links a product to the stores where it is available." .
+
+
+###  http://www.semanticweb.org/halaltourism#belongsToCategory
+:belongsToCategory rdf:type owl:ObjectProperty ;
+                   owl:inverseOf :hasProduct ;
+                   rdfs:domain :HalalProducts ;
+                   rdfs:comment "Links products to their categories" .
+
+
+###  http://www.semanticweb.org/halaltourism#booksServiceWith
+:booksServiceWith rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/halaltourism#browsesHalalMenuFrom
+:browsesHalalMenuFrom rdf:type owl:ObjectProperty ;
+                      owl:inverseOf :offersHalalMenuTo .
+
+
+###  http://www.semanticweb.org/halaltourism#caterTo
+:caterTo rdf:type owl:ObjectProperty ;
+         rdfs:domain :MuslimFriendlyTouristDestinations ;
+         rdfs:range :MuslimTourists ;
+         rdfs:comment "Indicates that MuslimFriendlyTouristDestinations serve MuslimTourists" .
+
+
+###  http://www.semanticweb.org/halaltourism#caterToNeeds
+:caterToNeeds rdf:type owl:ObjectProperty ;
+              rdfs:domain :MuslimFriendlyAirlines ;
+              rdfs:range :MuslimTourists ;
+              rdfs:comment "Shows how MuslimFriendlyAirlines cater to MuslimTourists needs" .
+
+
+###  http://www.semanticweb.org/halaltourism#catersToCustomers
+:catersToCustomers rdf:type owl:ObjectProperty ;
+                   rdfs:domain :HalalRetailOutlets ;
+                   rdfs:range :MuslimTourists ;
+                   rdfs:comment "Links stores to their target customer base." .
+
+
+###  http://www.semanticweb.org/halaltourism#certifies
+:certifies rdf:type owl:ObjectProperty ;
+           rdfs:domain :HalalCertificationAuthorities ;
+           rdfs:range :HalalCertifiedHotels ,
+                      :HalalCertifiedRestaurants ;
+           rdfs:comment "Shows HalalCertificationAuthorities certify HalalCertifiedHotels and HalalCertifiedRestaurants" .
+
+
+###  http://www.semanticweb.org/halaltourism#collaboratesWith
+:collaboratesWith rdf:type owl:ObjectProperty ,
+                           owl:SymmetricProperty ;
+                  rdfs:domain :HalalTourOperator ;
+                  rdfs:range :HalalTravelAgency ;
+                  rdfs:comment "Shows collaboration between HalalTourOperator and HalalTravelAgency" .
+
+
+###  http://www.semanticweb.org/halaltourism#compliesWith
+:compliesWith rdf:type owl:ObjectProperty ;
+              rdfs:domain :HalalTourism ;
+              rdfs:range :ShariahLawCompliance ;
+              rdfs:comment "Indicates HalalTourism compliance with ShariahLawCompliance" .
+
+
+###  http://www.semanticweb.org/halaltourism#conductsInspectionOf
+:conductsInspectionOf rdf:type owl:ObjectProperty ;
+                      owl:inverseOf :hasInspectionConductedBy ;
+                      rdfs:domain :RegulatoryBodies ;
+                      rdfs:range :ServiceProviders ;
+                      rdfs:comment "Inspection conducting relationship" .
+
+
+###  http://www.semanticweb.org/halaltourism#conductsReligiousActivityAt
+:conductsReligiousActivityAt rdf:type owl:ObjectProperty ;
+                             owl:inverseOf :hostsReligiousActivity ;
+                             rdfs:domain :IslamicCulturalCenter ;
+                             rdfs:range :MuslimFriendlyTouristDestinations ;
+                             rdfs:comment "Religious activity conducting relationship" .
+
+
+###  http://www.semanticweb.org/halaltourism#confirmsReservationFor
+:confirmsReservationFor rdf:type owl:ObjectProperty ;
+                        owl:inverseOf :hasReservationConfirmedBy ;
+                        rdfs:domain :HalalTravelAgency ;
+                        rdfs:range :MuslimTourists ;
+                        rdfs:comment "Reservation confirmation relationship" .
+
+
+###  http://www.semanticweb.org/halaltourism#consumesHalalFoodFrom
+:consumesHalalFoodFrom rdf:type owl:ObjectProperty ;
+                       owl:inverseOf :cooksHalalFoodFor .
+
+
+###  http://www.semanticweb.org/halaltourism#contains
+:contains rdf:type owl:ObjectProperty ;
+          owl:inverseOf :partOf ;
+          rdf:type owl:TransitiveProperty .
+
+
+###  http://www.semanticweb.org/halaltourism#cooksHalalFoodFor
+:cooksHalalFoodFor rdf:type owl:ObjectProperty ;
+                   rdfs:domain :HalalCertifiedRestaurants ;
+                   rdfs:range :MuslimTourists ;
+                   rdfs:comment "Halal food cooking relationship" .
+
+
+###  http://www.semanticweb.org/halaltourism#cooperatesWith
+:cooperatesWith rdf:type owl:ObjectProperty ,
+                         owl:SymmetricProperty ;
+                rdfs:domain :TransportationProviders ;
+                rdfs:range :MuslimFriendlyAttractions ;
+                rdfs:comment "Shows cooperation between TransportationProviders and MuslimFriendlyAttractions" .
+
+
+###  http://www.semanticweb.org/halaltourism#coordinatesActivityWith
+:coordinatesActivityWith rdf:type owl:ObjectProperty ,
+                                  owl:SymmetricProperty ;
+                         rdfs:domain :HalalTourOperator ;
+                         rdfs:range :ServiceProviders ;
+                         rdfs:comment "Activity coordination relationship" .
+
+
+###  http://www.semanticweb.org/halaltourism#coordinatesFlightFor
+:coordinatesFlightFor rdf:type owl:ObjectProperty ;
+                      owl:inverseOf :hasFlightCoordinatedBy ;
+                      rdfs:domain :MuslimFriendlyAirlines ;
+                      rdfs:range :MuslimTourists ;
+                      rdfs:comment "Flight coordination relationship" .
+
+
+###  http://www.semanticweb.org/halaltourism#customizesServiceFor
+:customizesServiceFor rdf:type owl:ObjectProperty ;
+                      owl:inverseOf :receivesCustomizedServiceFrom ;
+                      rdfs:domain :ServiceProviders ;
+                      rdfs:range :MuslimTourists ;
+                      rdfs:comment "Service customization relationship" .
+
+
+###  http://www.semanticweb.org/halaltourism#delegatesAuthorityTo
+:delegatesAuthorityTo rdf:type owl:ObjectProperty ;
+                      owl:inverseOf :receivesAuthorityFrom ;
+                      rdf:type owl:FunctionalProperty ;
+                      rdfs:domain :RegulatoryBodies ;
+                      rdfs:range :HalalCertificationAuthorities ;
+                      rdfs:comment "Authority delegation relationship" .
+
+
+###  http://www.semanticweb.org/halaltourism#designedFor
+:designedFor rdf:type owl:ObjectProperty ;
+             rdfs:domain :MuslimFriendlyMobileApplications ;
+             rdfs:range :MuslimGenZTravelers ;
+             rdfs:comment "Shows how MuslimFriendlyMobileApplications are designed for MuslimGenZTravelers" .
+
+
+###  http://www.semanticweb.org/halaltourism#designs
+:designs rdf:type owl:ObjectProperty ;
+         rdfs:domain :HalalTourismManagement ;
+         rdfs:range :IslamicDressCode ;
+         rdfs:comment "Shows how HalalTourismManagement designs IslamicDressCode standards" .
+
+
+###  http://www.semanticweb.org/halaltourism#designsPackageFor
+:designsPackageFor rdf:type owl:ObjectProperty ;
+                   owl:inverseOf :hasPackageDesignedBy ;
+                   rdfs:domain :HalalTourOperator ;
+                   rdfs:range :MuslimTourists ;
+                   rdfs:comment "Package design relationship" .
+
+
+###  http://www.semanticweb.org/halaltourism#dinesAt
+:dinesAt rdf:type owl:ObjectProperty ;
+         rdfs:domain :MuslimTourists ;
+         rdfs:range :FoodAndBeverage ;
+         rdfs:comment "Shows where MuslimTourists eat during their visit" .
+
+
+###  http://www.semanticweb.org/halaltourism#educatesAbout
+:educatesAbout rdf:type owl:ObjectProperty ;
+               rdfs:domain :IslamicCulturalCenter ;
+               rdfs:range :IslamicLifestyle ;
+               rdfs:comment "Shows how IslamicCulturalCenter educates about IslamicLifestyle" .
+
+
+###  http://www.semanticweb.org/halaltourism#enforces
+:enforces rdf:type owl:ObjectProperty ;
+          rdfs:domain :DestinationManagement ;
+          rdfs:range :AlcoholFreeEnvironments ;
+          rdfs:comment "Shows how DestinationManagement enforces AlcoholFreeEnvironments" .
+
+
+###  http://www.semanticweb.org/halaltourism#enforcesEthics
+:enforcesEthics rdf:type owl:ObjectProperty ;
+                rdfs:domain :IslamicEthicalAndCultural ;
+                rdfs:range :HalalTourism ;
+                rdfs:comment "Shows how IslamicEthicalAndCultural enforces ethics in HalalTourism" .
+
+
+###  http://www.semanticweb.org/halaltourism#enforcesPolicyAt
+:enforcesPolicyAt rdf:type owl:ObjectProperty ;
+                  owl:inverseOf :hasPolicyEnforcedBy ;
+                  rdfs:domain :RegulatoryBodies ;
+                  rdfs:range :MuslimFriendlyTouristDestinations ;
+                  rdfs:comment "Policy enforcement relationship" .
+
+
+###  http://www.semanticweb.org/halaltourism#enjoysHalalBreakfastAt
+:enjoysHalalBreakfastAt rdf:type owl:ObjectProperty ;
+                        owl:inverseOf :servesHalalBreakfastTo .
+
+
+###  http://www.semanticweb.org/halaltourism#enjoysRamadanMealFrom
+:enjoysRamadanMealFrom rdf:type owl:ObjectProperty ;
+                       owl:inverseOf :preparesRamadanMealFor .
+
+
+###  http://www.semanticweb.org/halaltourism#ensuresQuality
+:ensuresQuality rdf:type owl:ObjectProperty ;
+                rdfs:domain :HalalTourismManagement ;
+                rdfs:range :ServiceQuality ;
+                rdfs:comment "Shows how HalalTourismManagement ensures ServiceQuality" .
+
+
+###  http://www.semanticweb.org/halaltourism#evaluatesStandardsOf
+:evaluatesStandardsOf rdf:type owl:ObjectProperty ;
+                      owl:inverseOf :hasStandardsEvaluatedBy ;
+                      rdfs:domain :HalalCertificationAuthorities ;
+                      rdfs:range :ServiceProviders ;
+                      rdfs:comment "Standards evaluation relationship" .
+
+
+###  http://www.semanticweb.org/halaltourism#facilitates
+:facilitates rdf:type owl:ObjectProperty ;
+             rdfs:domain :InformationAndTechnology ,
+                         :MuslimFriendlyAirports ;
+             rdfs:range :HalalTourismManagement ,
+                        :WudhuFacilities ;
+             rdfs:comment "Shows what facilities are facilitated by different entities" .
+
+
+###  http://www.semanticweb.org/halaltourism#facilitatesBookingFor
+:facilitatesBookingFor rdf:type owl:ObjectProperty ;
+                       owl:inverseOf :handlesBookingVia .
+
+
+###  http://www.semanticweb.org/halaltourism#facilitatesTravel
+:facilitatesTravel rdf:type owl:ObjectProperty ;
+                   rdfs:domain :MuslimFriendlyGroundTransportation ;
+                   rdfs:range :MuslimTourists ;
+                   rdfs:comment "Shows how MuslimFriendlyGroundTransportation facilitates travel for MuslimTourists" .
+
+
+###  http://www.semanticweb.org/halaltourism#facilitatesWorship
+:facilitatesWorship rdf:type owl:ObjectProperty ;
+                    rdfs:domain :Mosques ;
+                    rdfs:range :MuslimTourists ;
+                    rdfs:comment "Shows how Mosques facilitate worship for MuslimTourists" .
+
+
+###  http://www.semanticweb.org/halaltourism#governsOperationOf
+:governsOperationOf rdf:type owl:ObjectProperty ;
+                    owl:inverseOf :isGovernedBy ;
+                    rdfs:domain :RegulatoryBodies ;
+                    rdfs:range :ServiceProviders ;
+                    rdfs:comment "Operation governance relationship" .
+
+
+###  http://www.semanticweb.org/halaltourism#grantsAccreditationTo
+:grantsAccreditationTo rdf:type owl:ObjectProperty ;
+                       owl:inverseOf :hasAccreditationGrantedBy ;
+                       rdf:type owl:FunctionalProperty ;
+                       rdfs:domain :HalalCertificationAuthorities ;
+                       rdfs:range :ServiceProviders ;
+                       rdfs:comment "Accreditation granting relationship" .
+
+
+###  http://www.semanticweb.org/halaltourism#handlesBookingVia
+:handlesBookingVia rdf:type owl:ObjectProperty ;
+                   rdfs:domain :ServiceProviders ;
+                   rdfs:range :MuslimFriendlyMobileApplications ;
+                   rdfs:comment "Booking handling relationship via mobile applications" .
+
+
+###  http://www.semanticweb.org/halaltourism#hasAccreditationGrantedBy
+:hasAccreditationGrantedBy rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/halaltourism#hasActivityScheduledBy
+:hasActivityScheduledBy rdf:type owl:ObjectProperty ;
+                        owl:inverseOf :schedulesActivityFor .
+
+
+###  http://www.semanticweb.org/halaltourism#hasAmenity
+:hasAmenity rdf:type owl:ObjectProperty ;
+            rdfs:domain :MuslimFriendlyHotels ;
+            rdfs:range :QiblaDirectionIndicators ;
+            rdfs:comment "Links MuslimFriendlyHotels to their QiblaDirectionIndicators amenity" .
+
+
+###  http://www.semanticweb.org/halaltourism#hasBookingManagedBy
+:hasBookingManagedBy rdf:type owl:ObjectProperty ;
+                     owl:inverseOf :managesBookingOf .
+
+
+###  http://www.semanticweb.org/halaltourism#hasBookingTrackedBy
+:hasBookingTrackedBy rdf:type owl:ObjectProperty ;
+                     owl:inverseOf :tracksBookingFor .
+
+
+###  http://www.semanticweb.org/halaltourism#hasCity
+:hasCity rdf:type owl:ObjectProperty ,
+                  owl:FunctionalProperty .
+
+
+###  http://www.semanticweb.org/halaltourism#hasComplementaryProduct
+:hasComplementaryProduct rdf:type owl:ObjectProperty ,
+                                  owl:SymmetricProperty ;
+                         rdfs:domain :HalalProducts ;
+                         rdfs:range :HalalProducts ;
+                         rdfs:comment "Links products to complementary products that work well together" .
+
+
+###  http://www.semanticweb.org/halaltourism#hasComplianceAssessedBy
+:hasComplianceAssessedBy rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/halaltourism#hasComplianceOversightBy
+:hasComplianceOversightBy rdf:type owl:ObjectProperty ;
+                          owl:inverseOf :overseesCompliance .
+
+
+###  http://www.semanticweb.org/halaltourism#hasContentManagedBy
+:hasContentManagedBy rdf:type owl:ObjectProperty ;
+                     owl:inverseOf :managesContentFor .
+
+
+###  http://www.semanticweb.org/halaltourism#hasEventOrganizedBy
+:hasEventOrganizedBy rdf:type owl:ObjectProperty ;
+                     owl:inverseOf :organizesEventFor .
+
+
+###  http://www.semanticweb.org/halaltourism#hasExperienceTailoredBy
+:hasExperienceTailoredBy rdf:type owl:ObjectProperty ;
+                         owl:inverseOf :tailorsExperienceFor .
+
+
+###  http://www.semanticweb.org/halaltourism#hasFacilities
+:hasFacilities rdf:type owl:ObjectProperty ;
+               rdfs:domain :Destination ;
+               rdfs:range :FacilitiesAndInfrastructures ;
+               rdfs:comment "Links a Destination to its available FacilitiesAndInfrastructures" .
+
+
+###  http://www.semanticweb.org/halaltourism#hasFacilitiesAuditedBy
+:hasFacilitiesAuditedBy rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/halaltourism#hasFacilityOperatedBy
+:hasFacilityOperatedBy rdf:type owl:ObjectProperty ;
+                       owl:inverseOf :operatesFacilityAt .
+
+
+###  http://www.semanticweb.org/halaltourism#hasFeature
+:hasFeature rdf:type owl:ObjectProperty ;
+            rdfs:domain :Accommodation ;
+            rdfs:range :PrayerRooms ;
+            rdfs:comment "Links Accommodation to its PrayerRooms feature" .
+
+
+###  http://www.semanticweb.org/halaltourism#hasFlightCoordinatedBy
+:hasFlightCoordinatedBy rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/halaltourism#hasGenderSegregatedAreaFor
+:hasGenderSegregatedAreaFor rdf:type owl:ObjectProperty ;
+                            owl:inverseOf :usesGenderSegregatedArea ;
+                            rdfs:domain :FacilitiesAndInfrastructures ;
+                            rdfs:range :MuslimTourists ;
+                            rdfs:comment "Gender segregated area provision relationship" .
+
+
+###  http://www.semanticweb.org/halaltourism#hasHalalKitchenMaintainedBy
+:hasHalalKitchenMaintainedBy rdf:type owl:ObjectProperty ;
+                             owl:inverseOf :maintainsHalalKitchenAt .
+
+
+###  http://www.semanticweb.org/halaltourism#hasHeritagePreservedBy
+:hasHeritagePreservedBy rdf:type owl:ObjectProperty ;
+                        owl:inverseOf :preservesHeritageAt .
+
+
+###  http://www.semanticweb.org/halaltourism#hasHygieneMaintainedBy
+:hasHygieneMaintainedBy rdf:type owl:ObjectProperty ;
+                        owl:inverseOf :maintainsHygieneAt .
+
+
+###  http://www.semanticweb.org/halaltourism#hasInspectionConductedBy
+:hasInspectionConductedBy rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/halaltourism#hasIslamicCulturePromotedBy
+:hasIslamicCulturePromotedBy rdf:type owl:ObjectProperty ;
+                             owl:inverseOf :promotesIslamicCultureAt .
+
+
+###  http://www.semanticweb.org/halaltourism#hasLocationTrackedBy
+:hasLocationTrackedBy rdf:type owl:ObjectProperty ;
+                      owl:inverseOf :tracksLocationOf .
+
+
+###  http://www.semanticweb.org/halaltourism#hasNearbyAttractions
+:hasNearbyAttractions rdf:type owl:ObjectProperty ;
+                      rdfs:domain :HalalCertifiedRestaurants ,
+                                  :Mosques ,
+                                  :MuslimFriendlyHotels ,
+                                  :Shopping ;
+                      rdfs:range :MuslimFriendlyAttractions ;
+                      rdfs:comment "Nearby attractions of interest to Muslim tourists" .
+
+
+###  http://www.semanticweb.org/halaltourism#hasNearbyHalalStores
+:hasNearbyHalalStores rdf:type owl:ObjectProperty ;
+                      rdfs:domain :Mosques ;
+                      rdfs:range :Shopping ;
+                      rdfs:comment "Nearby halal stores to the mosque" .
+
+
+###  http://www.semanticweb.org/halaltourism#hasNearbyHotels
+:hasNearbyHotels rdf:type owl:ObjectProperty ;
+                 rdfs:domain :Mosques ;
+                 rdfs:range :MuslimFriendlyHotels ;
+                 rdfs:comment "Nearby Muslim-friendly hotels to the mosque" .
+
+
+###  http://www.semanticweb.org/halaltourism#hasNearbyMosques
+:hasNearbyMosques rdf:type owl:ObjectProperty ;
+                  rdfs:domain :HalalCertifiedRestaurants ,
+                              :HalalRetailOutlets ,
+                              :MuslimFriendlyHotels ,
+                              :MuslimFriendlyRestaurants ,
+                              :Shopping ;
+                  rdfs:range :Mosques .
+
+
+###  http://www.semanticweb.org/halaltourism#hasOperationSupervisedBy
+:hasOperationSupervisedBy rdf:type owl:ObjectProperty ;
+                          owl:inverseOf :supervisesOperationOf .
+
+
+###  http://www.semanticweb.org/halaltourism#hasPackageDesignedBy
+:hasPackageDesignedBy rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/halaltourism#hasPerformanceMonitoredBy
+:hasPerformanceMonitoredBy rdf:type owl:ObjectProperty ;
+                           owl:inverseOf :monitorsPerformanceOf .
+
+
+###  http://www.semanticweb.org/halaltourism#hasPolicyEnforcedBy
+:hasPolicyEnforcedBy rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/halaltourism#hasPrayerSpace
+:hasPrayerSpace rdf:type owl:ObjectProperty ;
+                owl:inverseOf :servesAsPrayerSpaceFor ;
+                rdfs:domain :FacilitiesAndInfrastructures ;
+                rdfs:range :PrayerRooms ;
+                rdfs:comment "Prayer space provision relationship" .
+
+
+###  http://www.semanticweb.org/halaltourism#hasProduct
+:hasProduct rdf:type owl:ObjectProperty ;
+            rdfs:range :HalalProducts ;
+            rdfs:comment "Links categories to their products" .
+
+
+###  http://www.semanticweb.org/halaltourism#hasQualityMaintainedBy
+:hasQualityMaintainedBy rdf:type owl:ObjectProperty ;
+                        owl:inverseOf :maintainsQualityOf .
+
+
+###  http://www.semanticweb.org/halaltourism#hasReligiousPracticesSupportedBy
+:hasReligiousPracticesSupportedBy rdf:type owl:ObjectProperty ;
+                                  owl:inverseOf :supportsReligiousPracticeOf .
+
+
+###  http://www.semanticweb.org/halaltourism#hasReservationConfirmedBy
+:hasReservationConfirmedBy rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/halaltourism#hasReservationProcessedBy
+:hasReservationProcessedBy rdf:type owl:ObjectProperty ;
+                           owl:inverseOf :processesReservationFor .
+
+
+###  http://www.semanticweb.org/halaltourism#hasSimilarProduct
+:hasSimilarProduct rdf:type owl:ObjectProperty ,
+                            owl:SymmetricProperty ;
+                   rdfs:domain :HalalProducts ;
+                   rdfs:range :HalalProducts ;
+                   rdfs:comment "Links products to similar or related products" .
+
+
+###  http://www.semanticweb.org/halaltourism#hasSoftwareMaintainedBy
+:hasSoftwareMaintainedBy rdf:type owl:ObjectProperty ;
+                         owl:inverseOf :maintainsSoftwareFor .
+
+
+###  http://www.semanticweb.org/halaltourism#hasStandardsEvaluatedBy
+:hasStandardsEvaluatedBy rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/halaltourism#hasStandardsRegulatedBy
+:hasStandardsRegulatedBy rdf:type owl:ObjectProperty ;
+                         owl:inverseOf :regulatesStandardsFor .
+
+
+###  http://www.semanticweb.org/halaltourism#hasSystemMonitoredBy
+:hasSystemMonitoredBy rdf:type owl:ObjectProperty ;
+                      owl:inverseOf :monitorsSystemFor .
+
+
+###  http://www.semanticweb.org/halaltourism#hasTransferArrangedBy
+:hasTransferArrangedBy rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/halaltourism#hasTransportManagedBy
+:hasTransportManagedBy rdf:type owl:ObjectProperty ;
+                       owl:inverseOf :managesTransportFor .
+
+
+###  http://www.semanticweb.org/halaltourism#hasWudhuFacility
+:hasWudhuFacility rdf:type owl:ObjectProperty ;
+                  owl:inverseOf :servesAsWudhuFacilityFor ;
+                  rdfs:domain :FacilitiesAndInfrastructures ;
+                  rdfs:range :WudhuFacilities ;
+                  rdfs:comment "Wudhu facility provision relationship" .
+
+
+###  http://www.semanticweb.org/halaltourism#hostsReligiousActivity
+:hostsReligiousActivity rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/halaltourism#implementsPractices
+:implementsPractices rdf:type owl:ObjectProperty ;
+                     rdfs:domain :HalalTourismManagement ;
+                     rdfs:range :SustainableHalalTourismPractices ;
+                     rdfs:comment "Links HalalTourismManagement to its SustainableHalalTourismPractices" .
+
+
+###  http://www.semanticweb.org/halaltourism#implementsStandards
+:implementsStandards rdf:type owl:ObjectProperty ;
+                     rdfs:domain :ShariahCompliantHotels ;
+                     rdfs:range :HalalStandards ;
+                     rdfs:comment "Shows how ShariahCompliantHotels implement HalalStandards" .
+
+
+###  http://www.semanticweb.org/halaltourism#isAdministeredBy
+:isAdministeredBy rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/halaltourism#isAllocatedRoomBy
+:isAllocatedRoomBy rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/halaltourism#isAssignedTo
+:isAssignedTo rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/halaltourism#isGovernedBy
+:isGovernedBy rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/halaltourism#issues
+:issues rdf:type owl:ObjectProperty ;
+        rdfs:domain :HalalCertificationAuthorities ;
+        rdfs:range :HalalCertifications ;
+        rdfs:comment "Shows that HalalCertificationAuthorities issue HalalCertifications" .
+
+
+###  http://www.semanticweb.org/halaltourism#learnsIslamicHistoryFrom
+:learnsIslamicHistoryFrom rdf:type owl:ObjectProperty ;
+                          owl:inverseOf :teachesIslamicHistoryTo .
+
+
+###  http://www.semanticweb.org/halaltourism#locatedIn
+:locatedIn rdf:type owl:ObjectProperty ,
+                    owl:FunctionalProperty .
+
+
+###  http://www.semanticweb.org/halaltourism#locatedInNeighborhood
+:locatedInNeighborhood rdf:type owl:ObjectProperty ;
+                       rdfs:domain :HalalRetailOutlets ;
+                       rdfs:range :Destination ;
+                       rdfs:comment "Links stores to their neighborhood or area." .
+
+
+###  http://www.semanticweb.org/halaltourism#maintains
+:maintains rdf:type owl:ObjectProperty ;
+           rdfs:domain :DestinationManagement ;
+           rdfs:range :GamblingFreeEnvironments ;
+           rdfs:comment "Shows how DestinationManagement maintains GamblingFreeEnvironments" .
+
+
+###  http://www.semanticweb.org/halaltourism#maintainsFacilityFor
+:maintainsFacilityFor rdf:type owl:ObjectProperty ;
+                      owl:inverseOf :usesMaintainedFacility ;
+                      rdfs:domain :ServiceProviders ;
+                      rdfs:range :MuslimTourists ;
+                      rdfs:comment "Facility maintenance relationship" .
+
+
+###  http://www.semanticweb.org/halaltourism#maintainsHalalKitchenAt
+:maintainsHalalKitchenAt rdf:type owl:ObjectProperty ;
+                         rdfs:domain :FoodAndBeverageProviders ;
+                         rdfs:range :HalalCertifiedRestaurants ;
+                         rdfs:comment "Halal kitchen maintenance relationship" .
+
+
+###  http://www.semanticweb.org/halaltourism#maintainsHygieneAt
+:maintainsHygieneAt rdf:type owl:ObjectProperty ;
+                    rdfs:domain :HalalCertificationAuthorities ;
+                    rdfs:range :FoodAndBeverageProviders ;
+                    rdfs:comment "Hygiene maintenance relationship" .
+
+
+###  http://www.semanticweb.org/halaltourism#maintainsQualityOf
+:maintainsQualityOf rdf:type owl:ObjectProperty ;
+                    rdfs:domain :HalalTourismManagement ;
+                    rdfs:range :ServiceProviders ;
+                    rdfs:comment "Quality maintenance relationship" .
+
+
+###  http://www.semanticweb.org/halaltourism#maintainsSoftwareFor
+:maintainsSoftwareFor rdf:type owl:ObjectProperty ;
+                      rdfs:domain :InformationAndTechnology ;
+                      rdfs:range :ServiceProviders ;
+                      rdfs:comment "Software maintenance relationship" .
+
+
+###  http://www.semanticweb.org/halaltourism#maintainsStandards
+:maintainsStandards rdf:type owl:ObjectProperty ;
+                    rdfs:domain :RegulatoryBodies ;
+                    rdfs:range :HalalStandards ;
+                    rdfs:comment "Shows how RegulatoryBodies maintain HalalStandards" .
+
+
+###  http://www.semanticweb.org/halaltourism#managedBy
+:managedBy rdf:type owl:ObjectProperty ;
+           owl:inverseOf :manages .
+
+
+###  http://www.semanticweb.org/halaltourism#manages
+:manages rdf:type owl:ObjectProperty ;
+         rdfs:domain :AttractionOperators ,
+                     :DestinationManagementOrganizations ;
+         rdfs:range :MuslimFriendlyAttractions ,
+                    :MuslimFriendlyTouristDestinations ;
+         rdfs:comment "Shows management relationships between organizations and destinations" ,
+                      "Shows that AttractionOperators manage specific MuslimFriendlyAttractions" .
+
+
+###  http://www.semanticweb.org/halaltourism#managesBookingOf
+:managesBookingOf rdf:type owl:ObjectProperty ;
+                  rdfs:domain :HalalTravelAgency ;
+                  rdfs:range :AccommodationProviders ;
+                  rdfs:comment "Booking management relationship" .
+
+
+###  http://www.semanticweb.org/halaltourism#managesContentFor
+:managesContentFor rdf:type owl:ObjectProperty ;
+                   rdfs:domain :InformationAndTechnology ;
+                   rdfs:range :HalalTourismWebsites ;
+                   rdfs:comment "Content management relationship" .
+
+
+###  http://www.semanticweb.org/halaltourism#managesTransportFor
+:managesTransportFor rdf:type owl:ObjectProperty ;
+                     rdfs:domain :TransportationProviders ;
+                     rdfs:range :HalalTourismActivities ;
+                     rdfs:comment "Transport management relationship" .
+
+
+###  http://www.semanticweb.org/halaltourism#manufacturedBy
+:manufacturedBy rdf:type owl:ObjectProperty ;
+                owl:inverseOf :manufacturesProduct ;
+                rdfs:domain :HalalProducts ;
+                rdfs:range :ServiceProviders ;
+                rdfs:comment "Links products to their manufacturers" .
+
+
+###  http://www.semanticweb.org/halaltourism#manufacturesProduct
+:manufacturesProduct rdf:type owl:ObjectProperty ;
+                     rdfs:domain :ServiceProviders ;
+                     rdfs:range :HalalProducts ;
+                     rdfs:comment "Links manufacturers to products they produce" .
+
+
+###  http://www.semanticweb.org/halaltourism#monitorsPerformanceOf
+:monitorsPerformanceOf rdf:type owl:ObjectProperty ;
+                       rdfs:domain :DestinationManagementOrganizations ;
+                       rdfs:range :ServiceProviders ;
+                       rdfs:comment "Performance monitoring relationship" .
+
+
+###  http://www.semanticweb.org/halaltourism#monitorsSystemFor
+:monitorsSystemFor rdf:type owl:ObjectProperty ;
+                   rdfs:domain :InformationAndTechnology ;
+                   rdfs:range :ServiceProviders ;
+                   rdfs:comment "System monitoring relationship" .
+
+
+###  http://www.semanticweb.org/halaltourism#offers
+:offers rdf:type owl:ObjectProperty ;
+        rdfs:domain :FoodAndBeverage ;
+        rdfs:range :NonAlcoholicBeverages ;
+        rdfs:comment "Indicates what FoodAndBeverage establishments offer in terms of NonAlcoholicBeverages" .
+
+
+###  http://www.semanticweb.org/halaltourism#offersExperience
+:offersExperience rdf:type owl:ObjectProperty ;
+                  rdfs:domain :MuslimFriendlyCruises ;
+                  rdfs:range :HalalTourismActivities ;
+                  rdfs:comment "Shows what experiences MuslimFriendlyCruises offer in terms of HalalTourismActivities" .
+
+
+###  http://www.semanticweb.org/halaltourism#offersHalalMenuTo
+:offersHalalMenuTo rdf:type owl:ObjectProperty ;
+                   rdfs:domain :FoodAndBeverageProviders ;
+                   rdfs:range :MuslimTourists ;
+                   rdfs:comment "Halal menu offering relationship" .
+
+
+###  http://www.semanticweb.org/halaltourism#offersServices
+:offersServices rdf:type owl:ObjectProperty ;
+                rdfs:domain :MuslimFriendlyHealthcareAndWellnessService ;
+                rdfs:range :MuslimTourists ;
+                rdfs:comment "Links MuslimFriendlyHealthcareAndWellnessService to the MuslimTourists they serve" .
+
+
+###  http://www.semanticweb.org/halaltourism#operates
+:operates rdf:type owl:ObjectProperty ;
+          rdfs:domain :TransportationProviders ;
+          rdfs:range :TravelAndTransportation ;
+          rdfs:comment "Indicates TransportationProviders operate specific TravelAndTransportation services" .
+
+
+###  http://www.semanticweb.org/halaltourism#operatesFacilityAt
+:operatesFacilityAt rdf:type owl:ObjectProperty ;
+                    rdfs:domain :ServiceProviders ;
+                    rdfs:range :MuslimFriendlyTouristDestinations ;
+                    rdfs:comment "Facility operation relationship" .
+
+
+###  http://www.semanticweb.org/halaltourism#operatesRouteFor
+:operatesRouteFor rdf:type owl:ObjectProperty ;
+                  owl:inverseOf :usesTransportRoute ;
+                  rdfs:domain :TransportationProviders ;
+                  rdfs:range :MuslimTourists ;
+                  rdfs:comment "Route operation relationship" .
+
+
+###  http://www.semanticweb.org/halaltourism#organizes
+:organizes rdf:type owl:ObjectProperty ;
+           rdfs:domain :HalalTourOperator ;
+           rdfs:range :HalalTourismActivities ;
+           rdfs:comment "Links HalalTourOperator to the HalalTourismActivities they arrange" .
+
+
+###  http://www.semanticweb.org/halaltourism#organizesEventFor
+:organizesEventFor rdf:type owl:ObjectProperty ;
+                   rdfs:domain :HalalTourOperator ;
+                   rdfs:range :MuslimTourists ;
+                   rdfs:comment "Event organization relationship" .
+
+
+###  http://www.semanticweb.org/halaltourism#organizesPilgrimage
+:organizesPilgrimage rdf:type owl:ObjectProperty ;
+                     rdfs:domain :HalalTourOperator ;
+                     rdfs:range :IslamicHeritageSites ;
+                     rdfs:comment "Links HalalTourOperator to IslamicHeritageSites for pilgrimage organization" .
+
+
+###  http://www.semanticweb.org/halaltourism#overseesCompliance
+:overseesCompliance rdf:type owl:ObjectProperty ;
+                    rdfs:domain :IslamicGovernanceInstitutions ;
+                    rdfs:range :ServiceProviders ;
+                    rdfs:comment "Compliance oversight relationship" .
+
+
+###  http://www.semanticweb.org/halaltourism#partOf
+:partOf rdf:type owl:ObjectProperty ,
+                 owl:TransitiveProperty .
+
+
+###  http://www.semanticweb.org/halaltourism#partnersWith
+:partnersWith rdf:type owl:ObjectProperty ,
+                       owl:SymmetricProperty ;
+              rdfs:domain :AccommodationProviders ;
+              rdfs:range :FoodAndBeverageProviders ;
+              rdfs:comment "Shows partnership between AccommodationProviders and FoodAndBeverageProviders" .
+
+
+###  http://www.semanticweb.org/halaltourism#preparesRamadanMealFor
+:preparesRamadanMealFor rdf:type owl:ObjectProperty ;
+                        rdfs:domain :HalalCertifiedRestaurants ;
+                        rdfs:range :MuslimTourists ;
+                        rdfs:comment "Ramadan meal preparation relationship" .
+
+
+###  http://www.semanticweb.org/halaltourism#preserves
+:preserves rdf:type owl:ObjectProperty ;
+           rdfs:domain :IslamicMuseum ;
+           rdfs:comment "Shows how IslamicMuseum preserves Islamic heritage" .
+
+
+###  http://www.semanticweb.org/halaltourism#preservesHeritageAt
+:preservesHeritageAt rdf:type owl:ObjectProperty ;
+                     rdfs:domain :IslamicMuseum ;
+                     rdfs:range :IslamicHeritageSites ;
+                     rdfs:comment "Heritage preservation relationship" .
+
+
+###  http://www.semanticweb.org/halaltourism#processesReservationFor
+:processesReservationFor rdf:type owl:ObjectProperty ;
+                         rdfs:domain :ServiceProviders ;
+                         rdfs:range :MuslimTourists ;
+                         rdfs:comment "Reservation processing relationship" .
+
+
+###  http://www.semanticweb.org/halaltourism#promotes
+:promotes rdf:type owl:ObjectProperty ;
+          rdfs:domain :DestinationManagementOrganizations ,
+                      :HalalTourismWebsites ;
+          rdfs:range :Destination ,
+                     :HalalTourismActivities ,
+                     :MuslimFriendlyTouristDestinations ;
+          rdfs:comment "Links entities that promote destinations, activities or tourist destinations" .
+
+
+###  http://www.semanticweb.org/halaltourism#promotesCulture
+:promotesCulture rdf:type owl:ObjectProperty ;
+                 rdfs:domain :IslamicHospitality ;
+                 rdfs:range :IslamicEthicalAndCultural ;
+                 rdfs:comment "Shows how IslamicHospitality promotes IslamicEthicalAndCultural practices" .
+
+
+###  http://www.semanticweb.org/halaltourism#promotesIslamicCultureAt
+:promotesIslamicCultureAt rdf:type owl:ObjectProperty ;
+                          rdfs:domain :IslamicCulturalCenter ;
+                          rdfs:range :MuslimFriendlyTouristDestinations ;
+                          rdfs:comment "Islamic culture promotion relationship" .
+
+
+###  http://www.semanticweb.org/halaltourism#providedBy
+:providedBy rdf:type owl:ObjectProperty ;
+            owl:inverseOf :provides .
+
+
+###  http://www.semanticweb.org/halaltourism#provides
+:provides rdf:type owl:ObjectProperty ;
+          rdfs:domain :Accommodation ,
+                      :MuslimFriendlyAttractions ;
+          rdfs:range :HalalFood ,
+                     :HalalSwimmingSuits ;
+          rdfs:comment "Indicates what facilities or services are provided" .
+
+
+###  http://www.semanticweb.org/halaltourism#providesAirportServiceTo
+:providesAirportServiceTo rdf:type owl:ObjectProperty ;
+                          owl:inverseOf :receivesAirportServiceFrom ;
+                          rdfs:domain :MuslimFriendlyAirports ;
+                          rdfs:range :MuslimTourists ;
+                          rdfs:comment "Airport service provision relationship" .
+
+
+###  http://www.semanticweb.org/halaltourism#providesAmenityFor
+:providesAmenityFor rdf:type owl:ObjectProperty ;
+                    owl:inverseOf :usesAmenity ;
+                    rdfs:domain :ServiceProviders ;
+                    rdfs:range :MuslimTourists ;
+                    rdfs:comment "Amenity provision relationship" .
+
+
+###  http://www.semanticweb.org/halaltourism#providesAvailabilityTo
+:providesAvailabilityTo rdf:type owl:ObjectProperty ;
+                        owl:inverseOf :receivesAvailabilityFrom ;
+                        rdfs:domain :ServiceProviders ;
+                        rdfs:range :HalalTravelAgency ;
+                        rdfs:comment "Availability provision relationship" .
+
+
+###  http://www.semanticweb.org/halaltourism#providesCruiseServiceTo
+:providesCruiseServiceTo rdf:type owl:ObjectProperty ;
+                         owl:inverseOf :receivesCruiseServiceFrom ;
+                         rdfs:domain :MuslimFriendlyCruises ;
+                         rdfs:range :MuslimTourists ;
+                         rdfs:comment "Cruise service provision relationship" .
+
+
+###  http://www.semanticweb.org/halaltourism#providesDigitalSupportTo
+:providesDigitalSupportTo rdf:type owl:ObjectProperty ;
+                          owl:inverseOf :receivesDigitalSupportFrom ;
+                          rdfs:domain :InformationAndTechnology ;
+                          rdfs:range :ServiceProviders ;
+                          rdfs:comment "Digital support provision relationship" .
+
+
+###  http://www.semanticweb.org/halaltourism#providesGroundTransportTo
+:providesGroundTransportTo rdf:type owl:ObjectProperty ;
+                           owl:inverseOf :receivesGroundTransportFrom ;
+                           rdfs:domain :MuslimFriendlyGroundTransportation ;
+                           rdfs:range :MuslimTourists ;
+                           rdfs:comment "Ground transport provision relationship" .
+
+
+###  http://www.semanticweb.org/halaltourism#providesGuidance
+:providesGuidance rdf:type owl:ObjectProperty ;
+                  rdfs:domain :IslamicGovernanceInstitutions ;
+                  rdfs:range :ShariahLawCompliance ;
+                  rdfs:comment "Shows how IslamicGovernanceInstitutions provide guidance on ShariahLawCompliance" .
+
+
+###  http://www.semanticweb.org/halaltourism#providesHalalCateringTo
+:providesHalalCateringTo rdf:type owl:ObjectProperty ;
+                         owl:inverseOf :receivesHalalCateringFrom ;
+                         rdfs:domain :FoodAndBeverageProviders ;
+                         rdfs:range :MuslimTourists ;
+                         rdfs:comment "Halal catering provision relationship" .
+
+
+###  http://www.semanticweb.org/halaltourism#providesIslamicEducationTo
+:providesIslamicEducationTo rdf:type owl:ObjectProperty ;
+                            owl:inverseOf :receivesIslamicEducationFrom ;
+                            rdfs:domain :IslamicCulturalCenter ;
+                            rdfs:range :MuslimTourists ;
+                            rdfs:comment "Islamic education provision relationship" .
+
+
+###  http://www.semanticweb.org/halaltourism#providesLiveUpdateTo
+:providesLiveUpdateTo rdf:type owl:ObjectProperty ;
+                      owl:inverseOf :receivesLiveUpdateFrom ;
+                      rdfs:domain :InformationAndTechnology ;
+                      rdfs:range :MuslimTourists ;
+                      rdfs:comment "Live update provision relationship" .
+
+
+###  http://www.semanticweb.org/halaltourism#providesPrivacy
+:providesPrivacy rdf:type owl:ObjectProperty ;
+                 rdfs:domain :GenderSegregatedAreas ;
+                 rdfs:range :MuslimTourists ;
+                 rdfs:comment "Shows how GenderSegregatedAreas provide privacy for MuslimTourists" .
+
+
+###  http://www.semanticweb.org/halaltourism#providesWomenOnlyServiceTo
+:providesWomenOnlyServiceTo rdf:type owl:ObjectProperty ;
+                            owl:inverseOf :receivesWomenOnlyServiceFrom ;
+                            rdfs:domain :ServiceProviders ;
+                            rdfs:range :MuslimWomenTravelers ;
+                            rdfs:comment "Women-only service provision relationship" .
+
+
+###  http://www.semanticweb.org/halaltourism#receivesAirportServiceFrom
+:receivesAirportServiceFrom rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/halaltourism#receivesAuthorityFrom
+:receivesAuthorityFrom rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/halaltourism#receivesAvailabilityFrom
+:receivesAvailabilityFrom rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/halaltourism#receivesCruiseServiceFrom
+:receivesCruiseServiceFrom rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/halaltourism#receivesCustomizedServiceFrom
+:receivesCustomizedServiceFrom rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/halaltourism#receivesDigitalSupportFrom
+:receivesDigitalSupportFrom rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/halaltourism#receivesGroundTransportFrom
+:receivesGroundTransportFrom rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/halaltourism#receivesHalalCateringFrom
+:receivesHalalCateringFrom rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/halaltourism#receivesIslamicEducationFrom
+:receivesIslamicEducationFrom rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/halaltourism#receivesLiveUpdateFrom
+:receivesLiveUpdateFrom rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/halaltourism#receivesResourceFrom
+:receivesResourceFrom rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/halaltourism#receivesSupplyFrom
+:receivesSupplyFrom rdf:type owl:ObjectProperty ;
+                    owl:inverseOf :suppliesTo ;
+                    rdfs:domain :HalalRetailOutlets ;
+                    rdfs:range :ServiceProviders ;
+                    rdfs:comment "Links retail outlets to their suppliers" ,
+                                 "Links retail outlets to their suppliers." .
+
+
+###  http://www.semanticweb.org/halaltourism#receivesWomenOnlyServiceFrom
+:receivesWomenOnlyServiceFrom rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/halaltourism#regulates
+:regulates rdf:type owl:ObjectProperty ;
+           rdfs:domain :RegulatoryBodies ;
+           rdfs:range :HalalTourism ;
+           rdfs:comment "Indicates RegulatoryBodies regulate HalalTourism practices" .
+
+
+###  http://www.semanticweb.org/halaltourism#regulatesStandardsFor
+:regulatesStandardsFor rdf:type owl:ObjectProperty ;
+                       rdfs:domain :HalalCertificationAuthorities ;
+                       rdfs:range :ServiceProviders ;
+                       rdfs:comment "Standards regulation relationship" .
+
+
+###  http://www.semanticweb.org/halaltourism#schedulesActivityFor
+:schedulesActivityFor rdf:type owl:ObjectProperty ;
+                      rdfs:domain :HalalTourOperator ;
+                      rdfs:range :MuslimTourists ;
+                      rdfs:comment "Activity scheduling relationship" .
+
+
+###  http://www.semanticweb.org/halaltourism#sells
+:sells rdf:type owl:ObjectProperty ;
+       rdfs:domain :ServiceProviders ,
+                   :Shopping ;
+       rdfs:range :HalalCosmetics ,
+                  :HalalProducts ;
+       rdfs:comment "Shows products sold by different entities" .
+
+
+###  http://www.semanticweb.org/halaltourism#sellsProduct
+:sellsProduct rdf:type owl:ObjectProperty ;
+              rdfs:domain :HalalRetailOutlets ;
+              rdfs:range :HalalProducts ;
+              rdfs:comment "Links a store to the products it sells" ,
+                           "Links a store to the products it sells." .
+
+
+###  http://www.semanticweb.org/halaltourism#servesArea
+:servesArea rdf:type owl:ObjectProperty ;
+            rdfs:domain :HalalRetailOutlets ;
+            rdfs:range :Region ;
+            rdfs:comment "Links stores to the areas they serve." .
+
+
+###  http://www.semanticweb.org/halaltourism#servesAsPrayerSpaceFor
+:servesAsPrayerSpaceFor rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/halaltourism#servesAsWudhuFacilityFor
+:servesAsWudhuFacilityFor rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/halaltourism#servesHalalBreakfastTo
+:servesHalalBreakfastTo rdf:type owl:ObjectProperty ;
+                        rdfs:domain :Accommodation ;
+                        rdfs:range :MuslimTourists ;
+                        rdfs:comment "Halal breakfast service relationship" .
+
+
+###  http://www.semanticweb.org/halaltourism#staysAt
+:staysAt rdf:type owl:ObjectProperty ;
+         rdfs:domain :MuslimTourists ;
+         rdfs:range :Accommodation ;
+         rdfs:comment "Indicates where MuslimTourists stay during their visit" .
+
+
+###  http://www.semanticweb.org/halaltourism#supervisesOperationOf
+:supervisesOperationOf rdf:type owl:ObjectProperty ;
+                       rdfs:domain :DestinationManagement ;
+                       rdfs:range :FacilitiesAndInfrastructures ;
+                       rdfs:comment "Operation supervision relationship" .
+
+
+###  http://www.semanticweb.org/halaltourism#suppliesTo
+:suppliesTo rdf:type owl:ObjectProperty ;
+            rdfs:domain :ServiceProviders ;
+            rdfs:range :HalalRetailOutlets ;
+            rdfs:comment "Links suppliers to retail outlets they supply" ,
+                         "Links suppliers to retail outlets they supply." .
+
+
+###  http://www.semanticweb.org/halaltourism#supports
+:supports rdf:type owl:ObjectProperty ;
+          rdfs:domain :InformationAndTechnology ;
+          rdfs:range :HalalTourism ;
+          rdfs:comment "Shows how InformationAndTechnology supports HalalTourism" .
+
+
+###  http://www.semanticweb.org/halaltourism#supportsNeeds
+:supportsNeeds rdf:type owl:ObjectProperty ;
+               rdfs:domain :MuslimFriendlyTouristDestinations ;
+               rdfs:range :MuslimWomenTravelers ;
+               rdfs:comment "Shows how MuslimFriendlyTouristDestinations support MuslimWomenTravelers needs" .
+
+
+###  http://www.semanticweb.org/halaltourism#supportsReligiousPracticeOf
+:supportsReligiousPracticeOf rdf:type owl:ObjectProperty ;
+                             rdfs:domain :ServiceProviders ;
+                             rdfs:range :MuslimTourists ;
+                             rdfs:comment "Religious practice support relationship" .
+
+
+###  http://www.semanticweb.org/halaltourism#synchronizesDataWith
+:synchronizesDataWith rdf:type owl:ObjectProperty ,
+                               owl:SymmetricProperty ;
+                      rdfs:domain :InformationAndTechnology ;
+                      rdfs:range :ServiceProviders ;
+                      rdfs:comment "Data synchronization relationship" .
+
+
+###  http://www.semanticweb.org/halaltourism#tailorsExperienceFor
+:tailorsExperienceFor rdf:type owl:ObjectProperty ;
+                      rdfs:domain :ServiceProviders ;
+                      rdfs:range :MuslimTourists ;
+                      rdfs:comment "Experience tailoring relationship" .
+
+
+###  http://www.semanticweb.org/halaltourism#targetsAudience
+:targetsAudience rdf:type owl:ObjectProperty ;
+                 rdfs:domain :HalalTourismActivities ;
+                 rdfs:range :MuslimMillennialTravelers ;
+                 rdfs:comment "Shows how HalalTourismActivities target MuslimMillennialTravelers" .
+
+
+###  http://www.semanticweb.org/halaltourism#teachesIslamicHistoryTo
+:teachesIslamicHistoryTo rdf:type owl:ObjectProperty ;
+                         rdfs:domain :IslamicMuseum ;
+                         rdfs:range :MuslimTourists ;
+                         rdfs:comment "Islamic history teaching relationship" .
+
+
+###  http://www.semanticweb.org/halaltourism#tracksBookingFor
+:tracksBookingFor rdf:type owl:ObjectProperty ;
+                  rdfs:domain :InformationAndTechnology ;
+                  rdfs:range :ServiceProviders ;
+                  rdfs:comment "Booking tracking relationship" .
+
+
+###  http://www.semanticweb.org/halaltourism#tracksLocationOf
+:tracksLocationOf rdf:type owl:ObjectProperty ;
+                  rdfs:domain :MuslimFriendlyMobileApplications ;
+                  rdfs:range :MuslimTourists ;
+                  rdfs:comment "Location tracking relationship" .
+
+
+###  http://www.semanticweb.org/halaltourism#uses
+:uses rdf:type owl:ObjectProperty ;
+      rdfs:domain :MuslimTourists ;
+      rdfs:range :HalalProducts ,
+                 :TravelAndTransportation ;
+      rdfs:comment "Indicates services and products used by MuslimTourists" .
+
+
+###  http://www.semanticweb.org/halaltourism#usesAmenity
+:usesAmenity rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/halaltourism#usesGenderSegregatedArea
+:usesGenderSegregatedArea rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/halaltourism#usesMaintainedFacility
+:usesMaintainedFacility rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/halaltourism#usesTransportRoute
+:usesTransportRoute rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/halaltourism#verifies
+:verifies rdf:type owl:ObjectProperty ;
+          rdfs:domain :HalalCertificationAuthorities ;
+          rdfs:range :HalalFood ;
+          rdfs:comment "Shows how HalalCertificationAuthorities verify HalalFood" .
+
+
+###  http://www.semanticweb.org/halaltourism#visits
+:visits rdf:type owl:ObjectProperty ;
+        rdfs:domain :MuslimTourists ;
+        rdfs:range :MuslimFriendlyTouristDestinations ;
+        rdfs:comment "Shows that MuslimTourists visit MuslimFriendlyTouristDestinations" .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.semanticweb.org/halaltourism#hasAccessibility
+:hasAccessibility rdf:type owl:DatatypeProperty ;
+                  rdfs:domain :HalalRetailOutlets ;
+                  rdfs:range xsd:string ;
+                  rdfs:comment "Accessibility information including distance from stations" .
+
+
+###  http://www.semanticweb.org/halaltourism#hasAccessibilityFeatures
+:hasAccessibilityFeatures rdf:type owl:DatatypeProperty ;
+                          rdfs:domain [ rdf:type owl:Class ;
+                                        owl:unionOf ( :Accommodation
+                                                      :FacilitiesAndInfrastructures
+                                                    )
+                                      ] ;
+                          rdfs:range xsd:string ;
+                          rdfs:comment "List of accessibility features available" .
+
+
+###  http://www.semanticweb.org/halaltourism#hasAccessoryType
+:hasAccessoryType rdf:type owl:DatatypeProperty ;
+                  rdfs:domain :HalalAccessories ;
+                  rdfs:range xsd:string ;
+                  rdfs:comment "Type of halal fashion accessory. Examples include: islamic jewelry, handbag, modest scarf, belt, brooch, islamic-themed pin, prayer beads (tasbih), modest footwear, islamic wallet, halal leather goods, fashion scarves, hair accessories (for hijab styling), modest sunglasses, islamic-themed watches, etc." .
+
+
+###  http://www.semanticweb.org/halaltourism#hasAdditionalDetails
+:hasAdditionalDetails rdf:type owl:DatatypeProperty ;
+                      rdfs:domain :HalalCertifiedRestaurants ,
+                                  :HalalRetailOutlets ,
+                                  :Mosques ,
+                                  :MuslimFriendlyHotels ,
+                                  :Shopping ;
+                      rdfs:range xsd:string ;
+                      rdfs:comment "Additional details about the establishment" ,
+                                   "Additional details and miscellaneous information" .
+
+
+###  http://www.semanticweb.org/halaltourism#hasAdditionalServices
+:hasAdditionalServices rdf:type owl:DatatypeProperty ;
+                       rdfs:domain :ServiceProviders ;
+                       rdfs:range xsd:string ;
+                       rdfs:comment "Additional services offered" .
+
+
+###  http://www.semanticweb.org/halaltourism#hasAddress
+:hasAddress rdf:type owl:DatatypeProperty ;
+            rdfs:domain :HalalRetailOutlets ,
+                        [ rdf:type owl:Class ;
+                          owl:unionOf ( :Accommodation
+                                        :FoodAndBeverage
+                                        :MuslimFriendlyAttractions
+                                      )
+                        ] ;
+            rdfs:range xsd:string ;
+            rdfs:comment "Physical address of the halal retail outlet" ,
+                         "The physical address of the entity" .
+
+
+###  http://www.semanticweb.org/halaltourism#hasAllergenInfo
+:hasAllergenInfo rdf:type owl:DatatypeProperty ;
+                 rdfs:domain :FoodAndBeverage ,
+                             :HalalProducts ;
+                 rdfs:range xsd:string ;
+                 rdfs:comment "Allergen information and warnings for the product" .
+
+
+###  http://www.semanticweb.org/halaltourism#hasAmenitiesList
+:hasAmenitiesList rdf:type owl:DatatypeProperty ;
+                  rdfs:domain [ rdf:type owl:Class ;
+                                owl:unionOf ( :Accommodation
+                                              :MuslimFriendlyAttractions
+                                            )
+                              ] ;
+                  rdfs:range xsd:string ;
+                  rdfs:comment "List of amenities provided" .
+
+
+###  http://www.semanticweb.org/halaltourism#hasAppVersion
+:hasAppVersion rdf:type owl:DatatypeProperty ,
+                        owl:FunctionalProperty ;
+               rdfs:domain :MuslimFriendlyMobileApplications ;
+               rdfs:range xsd:string ;
+               rdfs:comment "Version number of the mobile application" .
+
+
+###  http://www.semanticweb.org/halaltourism#hasAvailability
+:hasAvailability rdf:type owl:DatatypeProperty ;
+                 rdfs:domain :FoodAndBeverage ,
+                             :HalalProducts ,
+                             [ rdf:type owl:Class ;
+                               owl:unionOf ( :FoodAndBeverage
+                                             :HalalProducts
+                                           )
+                             ] ;
+                 rdfs:range xsd:string ;
+                 rdfs:comment "Availability status of the product" ,
+                              "Availability status of the product." .
+
+
+###  http://www.semanticweb.org/halaltourism#hasAverageStayDuration
+:hasAverageStayDuration rdf:type owl:DatatypeProperty ;
+                        rdfs:domain :Accommodation ;
+                        rdfs:range xsd:duration ;
+                        rdfs:comment "Average duration of guest stays" .
+
+
+###  http://www.semanticweb.org/halaltourism#hasAwards
+:hasAwards rdf:type owl:DatatypeProperty ;
+           rdfs:domain :FoodAndBeverage ,
+                       :HalalProducts ,
+                       :ServiceProviders ;
+           rdfs:range xsd:string ;
+           rdfs:comment "Awards or recognitions received" .
+
+
+###  http://www.semanticweb.org/halaltourism#hasBeverages
+:hasBeverages rdf:type owl:DatatypeProperty ;
+              rdfs:domain :HalalRetailOutlets ;
+              rdfs:range xsd:string ;
+              rdfs:comment "Beverages availability information" .
+
+
+###  http://www.semanticweb.org/halaltourism#hasBrand
+:hasBrand rdf:type owl:DatatypeProperty ;
+          rdfs:domain :FoodAndBeverage ,
+                      :HalalProducts ,
+                      [ rdf:type owl:Class ;
+                        owl:unionOf ( :FoodAndBeverage
+                                      :HalalProducts
+                                    )
+                      ] ;
+          rdfs:range xsd:string ;
+          rdfs:comment "Brand name of the product" ,
+                       "Brand name of the product." .
+
+
+###  http://www.semanticweb.org/halaltourism#hasBulkBuyingOptions
+:hasBulkBuyingOptions rdf:type owl:DatatypeProperty ;
+                      rdfs:domain :HalalRetailOutlets ;
+                      rdfs:range xsd:string ;
+                      rdfs:comment "Bulk buying and wholesale options" .
+
+
+###  http://www.semanticweb.org/halaltourism#hasCancellationPolicy
+:hasCancellationPolicy rdf:type owl:DatatypeProperty ;
+                       rdfs:domain :ServiceProviders ;
+                       rdfs:range xsd:string ;
+                       rdfs:comment "Cancellation policy details" .
+
+
+###  http://www.semanticweb.org/halaltourism#hasCapacity
+:hasCapacity rdf:type owl:DatatypeProperty ;
+             rdfs:domain [ rdf:type owl:Class ;
+                           owl:unionOf ( :Accommodation
+                                         :MuslimFriendlyAttractions
+                                         :PrayerRooms
+                                       )
+                         ] ;
+             rdfs:range xsd:integer ;
+             rdfs:comment "The capacity of the entity" .
+
+
+###  http://www.semanticweb.org/halaltourism#hasCapacityFemale
+:hasCapacityFemale rdf:type owl:DatatypeProperty ;
+                   rdfs:domain :GenderSegregatedAreas ;
+                   rdfs:range xsd:integer ;
+                   rdfs:comment "The capacity for females in gender-segregated areas" .
+
+
+###  http://www.semanticweb.org/halaltourism#hasCapacityMale
+:hasCapacityMale rdf:type owl:DatatypeProperty ;
+                 rdfs:domain :GenderSegregatedAreas ;
+                 rdfs:range xsd:integer ;
+                 rdfs:comment "The capacity for males in gender-segregated areas" .
+
+
+###  http://www.semanticweb.org/halaltourism#hasCertificationDate
+:hasCertificationDate rdf:type owl:DatatypeProperty ,
+                               owl:FunctionalProperty ;
+                      rdfs:domain [ rdf:type owl:Class ;
+                                    owl:unionOf ( :HalalCertifiedHotels
+                                                  :HalalCertifiedRestaurants
+                                                )
+                                  ] ;
+                      rdfs:range xsd:date ;
+                      rdfs:comment "The date of Halal certification" .
+
+
+###  http://www.semanticweb.org/halaltourism#hasCertificationNumber
+:hasCertificationNumber rdf:type owl:DatatypeProperty ,
+                                 owl:FunctionalProperty ;
+                        rdfs:domain :HalalCertifications ;
+                        rdfs:range xsd:string ;
+                        rdfs:comment "Unique certification number" .
+
+
+###  http://www.semanticweb.org/halaltourism#hasCertifications
+:hasCertifications rdf:type owl:DatatypeProperty ;
+                   rdfs:domain :FoodAndBeverage ,
+                               :HalalProducts ,
+                               :ServiceProviders ;
+                   rdfs:range xsd:string ;
+                   rdfs:comment "All certifications beyond halal that the entity possesses" .
+
+
+###  http://www.semanticweb.org/halaltourism#hasCheckInOutTimes
+:hasCheckInOutTimes rdf:type owl:DatatypeProperty ;
+                    rdfs:domain :MuslimFriendlyHotels ,
+                                :ShariahCompliantHotels ;
+                    rdfs:range xsd:string ;
+                    rdfs:comment "Check-in and check-out times at the hotel" .
+
+
+###  http://www.semanticweb.org/halaltourism#hasCheckInTime
+:hasCheckInTime rdf:type owl:DatatypeProperty ;
+                rdfs:domain :Accommodation ;
+                rdfs:range xsd:time ;
+                rdfs:comment "Standard check-in time" .
+
+
+###  http://www.semanticweb.org/halaltourism#hasCheckOutTime
+:hasCheckOutTime rdf:type owl:DatatypeProperty ;
+                 rdfs:domain :Accommodation ;
+                 rdfs:range xsd:time ;
+                 rdfs:comment "Standard check-out time" .
+
+
+###  http://www.semanticweb.org/halaltourism#hasClothingType
+:hasClothingType rdf:type owl:DatatypeProperty ;
+                 rdfs:domain :HalalClothing ;
+                 rdfs:range xsd:string ;
+                 rdfs:comment "Type of halal clothing item. Examples include: hijab, abaya, modest dress, thobe, qamis, jalabiya, kaftan, shalwar kameez, prayer dress, ihram garment, burkini, modest swimwear, long-sleeve modest top, maxi dress, prayer cap, kufi, taqiyah, modest blouse, loose-fitting pants, modest skirt, etc." .
+
+
+###  http://www.semanticweb.org/halaltourism#hasColor
+:hasColor rdf:type owl:DatatypeProperty ;
+          rdfs:domain :HalalFashion ;
+          rdfs:range xsd:string ;
+          rdfs:comment "Primary color of the item" .
+
+
+###  http://www.semanticweb.org/halaltourism#hasCommunityInvolvement
+:hasCommunityInvolvement rdf:type owl:DatatypeProperty ;
+                         rdfs:domain :HalalRetailOutlets ;
+                         rdfs:range xsd:string ;
+                         rdfs:comment "Community involvement and activities" .
+
+
+###  http://www.semanticweb.org/halaltourism#hasCompanyRegNumber
+:hasCompanyRegNumber rdf:type owl:DatatypeProperty ,
+                              owl:FunctionalProperty ;
+                     rdfs:domain :ServiceProviders ;
+                     rdfs:range xsd:string ;
+                     rdfs:comment "Company registration number" .
+
+
+###  http://www.semanticweb.org/halaltourism#hasCompetitorStores
+:hasCompetitorStores rdf:type owl:DatatypeProperty ;
+                     rdfs:domain :HalalRetailOutlets ;
+                     rdfs:range xsd:string ;
+                     rdfs:comment "Information about competitor stores in the area" .
+
+
+###  http://www.semanticweb.org/halaltourism#hasComplementaryProducts
+:hasComplementaryProducts rdf:type owl:DatatypeProperty ;
+                          rdfs:domain :FoodAndBeverage ,
+                                      :HalalProducts ;
+                          rdfs:range xsd:string ;
+                          rdfs:comment "Products that complement or pair well with this product" .
+
+
+###  http://www.semanticweb.org/halaltourism#hasContactInfo
+:hasContactInfo rdf:type owl:DatatypeProperty ;
+                rdfs:domain :HalalCertifiedRestaurants ,
+                            :HalalRetailOutlets ,
+                            :Mosques ,
+                            :MuslimFriendlyHotels ,
+                            :MuslimFriendlyRestaurants ,
+                            :ShariahCompliantHotels ,
+                            :Shopping ,
+                            [ rdf:type owl:Class ;
+                              owl:unionOf ( :Accommodation
+                                            :FoodAndBeverage
+                                            :HalalRetailOutlets
+                                            :ServiceProviders
+                                          )
+                            ] ,
+                            [ rdf:type owl:Class ;
+                              owl:unionOf ( :Accommodation
+                                            :FoodAndBeverage
+                                            :ServiceProviders
+                                          )
+                            ] ;
+                rdfs:range xsd:string ;
+                rdfs:comment "Contact information for the entity" ,
+                             "Contact information for the establishment" ,
+                             "Contact information for the halal retail outlet" .
+
+
+###  http://www.semanticweb.org/halaltourism#hasCountryOfOrigin
+:hasCountryOfOrigin rdf:type owl:DatatypeProperty ;
+                    rdfs:domain :FoodAndBeverage ,
+                                :HalalProducts ,
+                                :ServiceProviders ;
+                    rdfs:range xsd:string ;
+                    rdfs:comment "Country where the product originates from" .
+
+
+###  http://www.semanticweb.org/halaltourism#hasCuisineType
+:hasCuisineType rdf:type owl:DatatypeProperty ;
+                rdfs:domain :HalalCertifiedRestaurants ,
+                            :MuslimFriendlyRestaurants ;
+                rdfs:range xsd:string ;
+                rdfs:comment "The type of cuisine served at the restaurant" .
+
+
+###  http://www.semanticweb.org/halaltourism#hasCulturalActivities
+:hasCulturalActivities rdf:type owl:DatatypeProperty ;
+                       rdfs:domain :Mosques ;
+                       rdfs:range xsd:string ;
+                       rdfs:comment "Cultural activities offered at the mosque" .
+
+
+###  http://www.semanticweb.org/halaltourism#hasCulturalSignificance
+:hasCulturalSignificance rdf:type owl:DatatypeProperty ;
+                         rdfs:domain :DestinationsAndAttractions ,
+                                     :FoodAndBeverage ,
+                                     :HalalProducts ;
+                         rdfs:range xsd:string ;
+                         rdfs:comment "Cultural importance or contextual significance" .
+
+
+###  http://www.semanticweb.org/halaltourism#hasCurrency
+:hasCurrency rdf:type owl:DatatypeProperty ;
+             rdfs:domain :FoodAndBeverage ,
+                         :HalalProducts ;
+             rdfs:range xsd:string ;
+             rdfs:comment "Currency used for product pricing" .
+
+
+###  http://www.semanticweb.org/halaltourism#hasCustomerFeedback
+:hasCustomerFeedback rdf:type owl:DatatypeProperty ;
+                     rdfs:domain :FoodAndBeverage ,
+                                 :HalalProducts ,
+                                 :ServiceProviders ;
+                     rdfs:range xsd:string ;
+                     rdfs:comment "Customer reviews and feedback" .
+
+
+###  http://www.semanticweb.org/halaltourism#hasCustomerService
+:hasCustomerService rdf:type owl:DatatypeProperty ;
+                    rdfs:domain :HalalRetailOutlets ;
+                    rdfs:range xsd:string ;
+                    rdfs:comment "Customer service information and quality" .
+
+
+###  http://www.semanticweb.org/halaltourism#hasCustomsInfo
+:hasCustomsInfo rdf:type owl:DatatypeProperty ;
+                rdfs:domain :FoodAndBeverage ,
+                            :HalalProducts ;
+                rdfs:range xsd:string ;
+                rdfs:comment "Customs and import duty information" .
+
+
+###  http://www.semanticweb.org/halaltourism#hasDairyProducts
+:hasDairyProducts rdf:type owl:DatatypeProperty ;
+                  rdfs:domain :HalalRetailOutlets ;
+                  rdfs:range xsd:string ;
+                  rdfs:comment "Dairy products availability information" .
+
+
+###  http://www.semanticweb.org/halaltourism#hasDeliveryService
+:hasDeliveryService rdf:type owl:DatatypeProperty ;
+                    rdfs:domain :HalalRetailOutlets ;
+                    rdfs:range xsd:boolean ,
+                               xsd:string ;
+                    rdfs:comment "Delivery service availability information" ,
+                                 "Whether the store offers delivery services" .
+
+
+###  http://www.semanticweb.org/halaltourism#hasDescription
+:hasDescription rdf:type owl:DatatypeProperty ;
+                rdfs:domain :HalalRetailOutlets ,
+                            [ rdf:type owl:Class ;
+                              owl:unionOf ( :Accommodation
+                                            :DestinationsAndAttractions
+                                            :FacilitiesAndInfrastructures
+                                            :FoodAndBeverage
+                                            :HalalTourism
+                                            :HalalTourismActivities
+                                            :TravelAndTransportation
+                                          )
+                            ] ;
+                rdfs:range xsd:string ;
+                rdfs:comment "A description of the entity" ,
+                             "Description of the halal retail outlet" .
+
+
+###  http://www.semanticweb.org/halaltourism#hasDietaryRestrictions
+:hasDietaryRestrictions rdf:type owl:DatatypeProperty ;
+                        rdfs:domain :FoodAndBeverage ,
+                                    :HalalProducts ;
+                        rdfs:range xsd:string ;
+                        rdfs:comment "Specific dietary compliance information" .
+
+
+###  http://www.semanticweb.org/halaltourism#hasDimensions
+:hasDimensions rdf:type owl:DatatypeProperty ;
+               rdfs:domain :FoodAndBeverage ,
+                           :HalalProducts ;
+               rdfs:range xsd:string ;
+               rdfs:comment "Physical dimensions of the product" .
+
+
+###  http://www.semanticweb.org/halaltourism#hasDiningOptions
+:hasDiningOptions rdf:type owl:DatatypeProperty ;
+                  rdfs:domain :HalalCertifiedRestaurants ,
+                              :MuslimFriendlyRestaurants ;
+                  rdfs:range xsd:string ;
+                  rdfs:comment "Dining options available at the restaurant (e.g., dine-in, takeout)" .
+
+
+###  http://www.semanticweb.org/halaltourism#hasDirections
+:hasDirections rdf:type owl:DatatypeProperty ;
+               rdfs:domain [ rdf:type owl:Class ;
+                             owl:unionOf ( :Mosques
+                                           :MuslimFriendlyAttractions
+                                         )
+                           ] ;
+               rdfs:range xsd:string ;
+               rdfs:comment "Directions to reach the location" .
+
+
+###  http://www.semanticweb.org/halaltourism#hasDiscountRate
+:hasDiscountRate rdf:type owl:DatatypeProperty ;
+                 rdfs:domain :ServiceProviders ;
+                 rdfs:range xsd:decimal ;
+                 rdfs:comment "Available discount rate" .
+
+
+###  http://www.semanticweb.org/halaltourism#hasDistributor
+:hasDistributor rdf:type owl:DatatypeProperty ;
+                rdfs:domain :FoodAndBeverage ,
+                            :HalalProducts ;
+                rdfs:range xsd:string ;
+                rdfs:comment "Distribution partner for the product" .
+
+
+###  http://www.semanticweb.org/halaltourism#hasDressCode
+:hasDressCode rdf:type owl:DatatypeProperty ;
+              rdfs:domain :Mosques ;
+              rdfs:range xsd:string ;
+              rdfs:comment "Dress code requirements for the mosque" .
+
+
+###  http://www.semanticweb.org/halaltourism#hasEmergencyContact
+:hasEmergencyContact rdf:type owl:DatatypeProperty ;
+                     rdfs:domain :ServiceProviders ;
+                     rdfs:range xsd:string ;
+                     rdfs:comment "Emergency contact information" .
+
+
+###  http://www.semanticweb.org/halaltourism#hasError
+:hasError rdf:type owl:DatatypeProperty ;
+          rdfs:domain :FoodAndBeverage ,
+                      :HalalProducts ,
+                      :HalalRetailOutlets ;
+          rdfs:range xsd:boolean ;
+          rdfs:comment "Error status in data processing" .
+
+
+###  http://www.semanticweb.org/halaltourism#hasEstablishmentDate
+:hasEstablishmentDate rdf:type owl:DatatypeProperty ;
+                      rdfs:domain [ rdf:type owl:Class ;
+                                    owl:unionOf ( :Accommodation
+                                                  :FoodAndBeverage
+                                                  :ServiceProviders
+                                                )
+                                  ] ;
+                      rdfs:range xsd:date ;
+                      rdfs:comment "The date the entity was established" .
+
+
+###  http://www.semanticweb.org/halaltourism#hasEventCapacity
+:hasEventCapacity rdf:type owl:DatatypeProperty ;
+                  rdfs:domain :MuslimFriendlyAttractions ;
+                  rdfs:range xsd:integer ;
+                  rdfs:comment "Maximum capacity for events" .
+
+
+###  http://www.semanticweb.org/halaltourism#hasEventDate
+:hasEventDate rdf:type owl:DatatypeProperty ;
+              rdfs:domain :HalalTourismActivities ;
+              rdfs:range xsd:date ;
+              rdfs:comment "Date of the event" .
+
+
+###  http://www.semanticweb.org/halaltourism#hasEventDuration
+:hasEventDuration rdf:type owl:DatatypeProperty ;
+                  rdfs:domain :HalalTourismActivities ;
+                  rdfs:range xsd:duration ;
+                  rdfs:comment "Duration of the event" .
+
+
+###  http://www.semanticweb.org/halaltourism#hasExpiryDate
+:hasExpiryDate rdf:type owl:DatatypeProperty ;
+               rdfs:domain :HalalCertifications ;
+               rdfs:range xsd:date ;
+               rdfs:comment "The expiry date of the certification" .
+
+
+###  http://www.semanticweb.org/halaltourism#hasExportTimestamp
+:hasExportTimestamp rdf:type owl:DatatypeProperty ,
+                             owl:FunctionalProperty ;
+                    rdfs:domain :FoodAndBeverage ,
+                                :HalalProducts ;
+                    rdfs:range xsd:dateTime ;
+                    rdfs:comment "Timestamp when data was exported" .
+
+
+###  http://www.semanticweb.org/halaltourism#hasExtractionSuccess
+:hasExtractionSuccess rdf:type owl:DatatypeProperty ;
+                      rdfs:domain :FoodAndBeverage ,
+                                  :HalalProducts ,
+                                  :HalalRetailOutlets ;
+                      rdfs:range xsd:boolean ;
+                      rdfs:comment "Status indicating successful data extraction" .
+
+
+###  http://www.semanticweb.org/halaltourism#hasExtractionTimestamp
+:hasExtractionTimestamp rdf:type owl:DatatypeProperty ,
+                                 owl:FunctionalProperty ;
+                        rdfs:domain :FoodAndBeverage ,
+                                    :HalalProducts ;
+                        rdfs:range xsd:dateTime ;
+                        rdfs:comment "Timestamp when data was extracted" .
+
+
+###  http://www.semanticweb.org/halaltourism#hasFabricType
+:hasFabricType rdf:type owl:DatatypeProperty ;
+               rdfs:domain :HalalClothing ;
+               rdfs:range xsd:string ;
+               rdfs:comment "Material composition (cotton, polyester, silk, etc.)" .
+
+
+###  http://www.semanticweb.org/halaltourism#hasFaxNumber
+:hasFaxNumber rdf:type owl:DatatypeProperty ;
+              rdfs:domain :ServiceProviders ;
+              rdfs:range xsd:string ;
+              rdfs:comment "Fax number of the service provider" .
+
+
+###  http://www.semanticweb.org/halaltourism#hasFlightNumber
+:hasFlightNumber rdf:type owl:DatatypeProperty ;
+                 rdfs:domain :MuslimFriendlyAirlines ;
+                 rdfs:range xsd:string ;
+                 rdfs:comment "Flight number" .
+
+
+###  http://www.semanticweb.org/halaltourism#hasFoundingYear
+:hasFoundingYear rdf:type owl:DatatypeProperty ;
+                 rdfs:domain :ServiceProviders ;
+                 rdfs:range xsd:gYear ;
+                 rdfs:comment "Year the service provider was founded" .
+
+
+###  http://www.semanticweb.org/halaltourism#hasFreshProduce
+:hasFreshProduce rdf:type owl:DatatypeProperty ;
+                 rdfs:domain :HalalRetailOutlets ;
+                 rdfs:range xsd:string ;
+                 rdfs:comment "Fresh produce availability information" .
+
+
+###  http://www.semanticweb.org/halaltourism#hasFrozenFoods
+:hasFrozenFoods rdf:type owl:DatatypeProperty ;
+                rdfs:domain :HalalRetailOutlets ;
+                rdfs:range xsd:string ;
+                rdfs:comment "Frozen foods availability information" .
+
+
+###  http://www.semanticweb.org/halaltourism#hasGender
+:hasGender rdf:type owl:DatatypeProperty ;
+           rdfs:domain :HalalFashion ;
+           rdfs:range xsd:string ;
+           rdfs:comment "Target gender (women, men, unisex)" .
+
+
+###  http://www.semanticweb.org/halaltourism#hasGenderPolicy
+:hasGenderPolicy rdf:type owl:DatatypeProperty ;
+                 rdfs:domain :FacilitiesAndInfrastructures ;
+                 rdfs:range xsd:string ;
+                 rdfs:comment "Gender-related policies and arrangements" .
+
+
+###  http://www.semanticweb.org/halaltourism#hasGroupSize
+:hasGroupSize rdf:type owl:DatatypeProperty ;
+              rdfs:domain :HalalTourismActivities ;
+              rdfs:range xsd:integer ;
+              rdfs:comment "Maximum group size for the activity" .
+
+
+###  http://www.semanticweb.org/halaltourism#hasHalalCertificateNumber
+:hasHalalCertificateNumber rdf:type owl:DatatypeProperty ,
+                                    owl:FunctionalProperty ;
+                           rdfs:domain [ rdf:type owl:Class ;
+                                         owl:unionOf ( :HalalCertifiedHotels
+                                                       :HalalCertifiedRestaurants
+                                                     )
+                                       ] ;
+                           rdfs:range xsd:string ;
+                           rdfs:comment "Unique halal certificate number" .
+
+
+###  http://www.semanticweb.org/halaltourism#hasHalalCertificationAuthority
+:hasHalalCertificationAuthority rdf:type owl:DatatypeProperty ,
+                                         owl:FunctionalProperty ;
+                                rdfs:domain [ rdf:type owl:Class ;
+                                              owl:unionOf ( :HalalCertifiedHotels
+                                                            :HalalCertifiedRestaurants
+                                                          )
+                                            ] ;
+                                rdfs:range xsd:string ;
+                                rdfs:comment "The name of the Halal certification authority" .
+
+
+###  http://www.semanticweb.org/halaltourism#hasHalalCertificationBody
+:hasHalalCertificationBody rdf:type owl:DatatypeProperty ;
+                           rdfs:domain :FoodAndBeverage ,
+                                       :HalalProducts ,
+                                       :ServiceProviders ;
+                           rdfs:range xsd:string ;
+                           rdfs:comment "Specific halal certification authority that issued the certification" .
+
+
+###  http://www.semanticweb.org/halaltourism#hasHalalCertificationExpiry
+:hasHalalCertificationExpiry rdf:type owl:DatatypeProperty ;
+                             rdfs:domain [ rdf:type owl:Class ;
+                                           owl:unionOf ( :HalalCertifiedHotels
+                                                         :HalalCertifiedRestaurants
+                                                         :HalalProducts
+                                                         :HalalRetailOutlets
+                                                       )
+                                         ] ;
+                             rdfs:range xsd:date ;
+                             rdfs:comment "Expiry date of the halal certification for the entity." .
+
+
+###  http://www.semanticweb.org/halaltourism#hasHalalCertificationStatus
+:hasHalalCertificationStatus rdf:type owl:DatatypeProperty ;
+                             rdfs:domain :FoodAndBeverage ,
+                                         :HalalCertifiedRestaurants ,
+                                         :HalalProducts ,
+                                         :HalalRetailOutlets ,
+                                         :MuslimFriendlyRestaurants ,
+                                         :ServiceProviders ;
+                             rdfs:range xsd:string ;
+                             rdfs:comment "Halal certification status of the retail outlet" ,
+                                          "The halal certification status of the establishment" ,
+                                          "The halal certification status of the establishment or product" .
+
+
+###  http://www.semanticweb.org/halaltourism#hasHalalFacilities
+:hasHalalFacilities rdf:type owl:DatatypeProperty ;
+                    rdfs:domain :MuslimFriendlyHotels ,
+                                :ShariahCompliantHotels ;
+                    rdfs:range xsd:string ;
+                    rdfs:comment "Halal facilities available at the hotel" .
+
+
+###  http://www.semanticweb.org/halaltourism#hasHalalFoodAvailability
+:hasHalalFoodAvailability rdf:type owl:DatatypeProperty ;
+                          rdfs:domain :MuslimFriendlyHotels ,
+                                      :ShariahCompliantHotels ;
+                          rdfs:range xsd:string ;
+                          rdfs:comment "Availability of halal food at the hotel" .
+
+
+###  http://www.semanticweb.org/halaltourism#hasHalalMeatSelection
+:hasHalalMeatSelection rdf:type owl:DatatypeProperty ;
+                       rdfs:domain :HalalRetailOutlets ;
+                       rdfs:range xsd:string ;
+                       rdfs:comment "Types of halal meat available (e.g., beef, chicken, lamb, goat, fish)" .
+
+
+###  http://www.semanticweb.org/halaltourism#hasHalalMenuOptions
+:hasHalalMenuOptions rdf:type owl:DatatypeProperty ;
+                     rdfs:domain :FoodAndBeverage ;
+                     rdfs:range xsd:string ;
+                     rdfs:comment "Available halal menu options" .
+
+
+###  http://www.semanticweb.org/halaltourism#hasHalalProductsVariety
+:hasHalalProductsVariety rdf:type owl:DatatypeProperty ;
+                         rdfs:domain :HalalRetailOutlets ;
+                         rdfs:range xsd:string ;
+                         rdfs:comment "Variety and description of halal products available" .
+
+
+###  http://www.semanticweb.org/halaltourism#hasHalalSectionAvailability
+:hasHalalSectionAvailability rdf:type owl:DatatypeProperty ;
+                             rdfs:domain :HalalRetailOutlets ;
+                             rdfs:range xsd:boolean ,
+                                        xsd:string ;
+                             rdfs:comment "Whether the store has a dedicated halal section" .
+
+
+###  http://www.semanticweb.org/halaltourism#hasHalalServices
+:hasHalalServices rdf:type owl:DatatypeProperty ;
+                  rdfs:domain :Mosques ;
+                  rdfs:range xsd:string ;
+                  rdfs:comment "Halal services provided by the mosque" .
+
+
+###  http://www.semanticweb.org/halaltourism#hasHistoricalSignificance
+:hasHistoricalSignificance rdf:type owl:DatatypeProperty ;
+                           rdfs:domain :IslamicHeritageSites ;
+                           rdfs:range xsd:string ;
+                           rdfs:comment "Historical significance of the site" .
+
+
+###  http://www.semanticweb.org/halaltourism#hasImportInfo
+:hasImportInfo rdf:type owl:DatatypeProperty ;
+               rdfs:domain :FoodAndBeverage ,
+                           :HalalProducts ;
+               rdfs:range xsd:string ;
+               rdfs:comment "Import/export related information" .
+
+
+###  http://www.semanticweb.org/halaltourism#hasIngredients
+:hasIngredients rdf:type owl:DatatypeProperty ;
+                rdfs:domain :FoodAndBeverage ,
+                            :HalalCosmetics ,
+                            :HalalProducts ;
+                rdfs:range xsd:string ;
+                rdfs:comment "List of ingredients used in the product" .
+
+
+###  http://www.semanticweb.org/halaltourism#hasInsurancePolicy
+:hasInsurancePolicy rdf:type owl:DatatypeProperty ;
+                    rdfs:domain :ServiceProviders ;
+                    rdfs:range xsd:string ;
+                    rdfs:comment "Insurance policy details" .
+
+
+###  http://www.semanticweb.org/halaltourism#hasInternationalFoods
+:hasInternationalFoods rdf:type owl:DatatypeProperty ;
+                       rdfs:domain :HalalRetailOutlets ;
+                       rdfs:range xsd:string ;
+                       rdfs:comment "International foods availability and types" .
+
+
+###  http://www.semanticweb.org/halaltourism#hasLanguages
+:hasLanguages rdf:type owl:DatatypeProperty ;
+              rdfs:domain [ rdf:type owl:Class ;
+                            owl:unionOf ( :HalalTourismWebsites
+                                          :MuslimFriendlyMobileApplications
+                                        )
+                          ] ;
+              rdfs:range xsd:string ;
+              rdfs:comment "The languages supported by the entity" .
+
+
+###  http://www.semanticweb.org/halaltourism#hasLanguagesAvailable
+:hasLanguagesAvailable rdf:type owl:DatatypeProperty ;
+                       rdfs:domain :Mosques ;
+                       rdfs:range xsd:string ;
+                       rdfs:comment "Languages available for services at the mosque" .
+
+
+###  http://www.semanticweb.org/halaltourism#hasLanguagesSpoken
+:hasLanguagesSpoken rdf:type owl:DatatypeProperty ;
+                    rdfs:domain :HalalRetailOutlets ,
+                                :MuslimFriendlyHotels ,
+                                :ShariahCompliantHotels ;
+                    rdfs:range xsd:string ;
+                    rdfs:comment "Languages spoken by staff" ,
+                                 "Languages spoken by staff at the halal retail outlet" ,
+                                 "Languages spoken by staff at the hotel" .
+
+
+###  http://www.semanticweb.org/halaltourism#hasLastInspectionDate
+:hasLastInspectionDate rdf:type owl:DatatypeProperty ;
+                       rdfs:domain [ rdf:type owl:Class ;
+                                     owl:unionOf ( :HalalCertifiedHotels
+                                                   :HalalCertifiedRestaurants
+                                                 )
+                                   ] ;
+                       rdfs:range xsd:date ;
+                       rdfs:comment "Date of last halal certification inspection" .
+
+
+###  http://www.semanticweb.org/halaltourism#hasLastRenovationDate
+:hasLastRenovationDate rdf:type owl:DatatypeProperty ;
+                       rdfs:domain :Accommodation ;
+                       rdfs:range xsd:date ;
+                       rdfs:comment "Date of last renovation" .
+
+
+###  http://www.semanticweb.org/halaltourism#hasLatitude
+:hasLatitude rdf:type owl:DatatypeProperty ;
+             rdfs:domain [ rdf:type owl:Class ;
+                           owl:unionOf ( :Destination
+                                         :Mosques
+                                         :MuslimFriendlyAttractions
+                                       )
+                         ] ;
+             rdfs:range xsd:decimal ;
+             rdfs:comment "The latitude coordinate of the entity" .
+
+
+###  http://www.semanticweb.org/halaltourism#hasLicenseNumber
+:hasLicenseNumber rdf:type owl:DatatypeProperty ,
+                           owl:FunctionalProperty ;
+                  rdfs:domain :ServiceProviders ;
+                  rdfs:range xsd:string ;
+                  rdfs:comment "Business license number" .
+
+
+###  http://www.semanticweb.org/halaltourism#hasLongitude
+:hasLongitude rdf:type owl:DatatypeProperty ;
+              rdfs:domain [ rdf:type owl:Class ;
+                            owl:unionOf ( :Destination
+                                          :Mosques
+                                          :MuslimFriendlyAttractions
+                                        )
+                          ] ;
+              rdfs:range xsd:decimal ;
+              rdfs:comment "The longitude coordinate of the entity" .
+
+
+###  http://www.semanticweb.org/halaltourism#hasLoyaltyPrograms
+:hasLoyaltyPrograms rdf:type owl:DatatypeProperty ;
+                    rdfs:domain :HalalRetailOutlets ;
+                    rdfs:range xsd:string ;
+                    rdfs:comment "Loyalty programs and customer rewards" .
+
+
+###  http://www.semanticweb.org/halaltourism#hasMaintenanceSchedule
+:hasMaintenanceSchedule rdf:type owl:DatatypeProperty ;
+                        rdfs:domain :FacilitiesAndInfrastructures ;
+                        rdfs:range xsd:string ;
+                        rdfs:comment "Maintenance schedule information" .
+
+
+###  http://www.semanticweb.org/halaltourism#hasManufacturer
+:hasManufacturer rdf:type owl:DatatypeProperty ;
+                 rdfs:domain :FoodAndBeverage ,
+                             :HalalProducts ,
+                             [ rdf:type owl:Class ;
+                               owl:unionOf ( :FoodAndBeverage
+                                             :HalalProducts
+                                           )
+                             ] ;
+                 rdfs:range xsd:string ;
+                 rdfs:comment "Manufacturer or producer of the product" ,
+                              "Manufacturer or producer of the product." .
+
+
+###  http://www.semanticweb.org/halaltourism#hasMaximumCapacity
+:hasMaximumCapacity rdf:type owl:DatatypeProperty ;
+                    rdfs:domain :FacilitiesAndInfrastructures ;
+                    rdfs:range xsd:integer ;
+                    rdfs:comment "Maximum capacity of the facility" .
+
+
+###  http://www.semanticweb.org/halaltourism#hasMeatAndPoultry
+:hasMeatAndPoultry rdf:type owl:DatatypeProperty ;
+                   rdfs:domain :HalalRetailOutlets ;
+                   rdfs:range xsd:string ;
+                   rdfs:comment "Meat and poultry products availability" .
+
+
+###  http://www.semanticweb.org/halaltourism#hasMenuHighlights
+:hasMenuHighlights rdf:type owl:DatatypeProperty ;
+                   rdfs:domain :HalalCertifiedRestaurants ,
+                               :MuslimFriendlyRestaurants ;
+                   rdfs:range xsd:string ;
+                   rdfs:comment "Highlights from the restaurant's menu" .
+
+
+###  http://www.semanticweb.org/halaltourism#hasMenuItems
+:hasMenuItems rdf:type owl:DatatypeProperty ;
+              rdfs:domain :FoodAndBeverage ;
+              rdfs:range xsd:string ;
+              rdfs:comment "List of menu items" .
+
+
+###  http://www.semanticweb.org/halaltourism#hasMinimumAge
+:hasMinimumAge rdf:type owl:DatatypeProperty ;
+               rdfs:domain :HalalTourismActivities ;
+               rdfs:range xsd:integer ;
+               rdfs:comment "Minimum age requirement for the activity" .
+
+
+###  http://www.semanticweb.org/halaltourism#hasMinimumOrderQuantity
+:hasMinimumOrderQuantity rdf:type owl:DatatypeProperty ;
+                         rdfs:domain :FoodAndBeverage ,
+                                     :HalalProducts ;
+                         rdfs:range xsd:string ;
+                         rdfs:comment "Minimum quantity required for orders" .
+
+
+###  http://www.semanticweb.org/halaltourism#hasModestyLevel
+:hasModestyLevel rdf:type owl:DatatypeProperty ;
+                 rdfs:domain :HalalClothing ;
+                 rdfs:range xsd:string ;
+                 rdfs:comment "Level of coverage/modesty provided" .
+
+
+###  http://www.semanticweb.org/halaltourism#hasName
+:hasName rdf:type owl:DatatypeProperty ;
+         rdfs:domain :HalalRetailOutlets ,
+                     [ rdf:type owl:Class ;
+                       owl:unionOf ( :Accommodation
+                                     :Destination
+                                     :FoodAndBeverage
+                                     :HalalTourism
+                                     :HalalTourismActivities
+                                     :ServiceProviders
+                                     :TravelAndTransportation
+                                   )
+                     ] ;
+         rdfs:range xsd:string ;
+         rdfs:comment "Name of the halal retail outlet" ,
+                      "The name of the entity" .
+
+
+###  http://www.semanticweb.org/halaltourism#hasNearbyMosques
+:hasNearbyMosques rdf:type owl:DatatypeProperty ;
+                  rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/halaltourism#hasNearbyRestaurants
+:hasNearbyRestaurants rdf:type owl:DatatypeProperty ;
+                      rdfs:domain :HalalRetailOutlets ,
+                                  [ rdf:type owl:Class ;
+                                    owl:unionOf ( :Accommodation
+                                                  :DestinationsAndAttractions
+                                                  :FacilitiesAndInfrastructures
+                                                  :FoodAndBeverage
+                                                )
+                                  ] ;
+                      rdfs:range xsd:string ;
+                      rdfs:comment "Information about nearby halal restaurants" ,
+                                   "Nearby halal restaurants information (as text)" .
+
+
+###  http://www.semanticweb.org/halaltourism#hasNearbyStations
+:hasNearbyStations rdf:type owl:DatatypeProperty ;
+                   rdfs:domain :HalalRetailOutlets ;
+                   rdfs:range xsd:string ;
+                   rdfs:comment "Nearby public transportation stations" .
+
+
+###  http://www.semanticweb.org/halaltourism#hasNearbyTransportation
+:hasNearbyTransportation rdf:type owl:DatatypeProperty ;
+                         rdfs:domain [ rdf:type owl:Class ;
+                                       owl:unionOf ( :Accommodation
+                                                     :FoodAndBeverage
+                                                     :Mosques
+                                                     :MuslimFriendlyAttractions
+                                                   )
+                                     ] ;
+                         rdfs:range xsd:string ;
+                         rdfs:comment "Information about nearby transportation stations, stops, and terminals" .
+
+
+###  http://www.semanticweb.org/halaltourism#hasNeighborhood
+:hasNeighborhood rdf:type owl:DatatypeProperty ;
+                 rdfs:domain :HalalRetailOutlets ;
+                 rdfs:range xsd:string ;
+                 rdfs:comment "Neighborhood or area description" .
+
+
+###  http://www.semanticweb.org/halaltourism#hasNumberOfReviews
+:hasNumberOfReviews rdf:type owl:DatatypeProperty ;
+                    rdfs:domain [ rdf:type owl:Class ;
+                                  owl:unionOf ( :Accommodation
+                                                :FoodAndBeverage
+                                                :MuslimFriendlyAttractions
+                                              )
+                                ] ;
+                    rdfs:range xsd:integer ;
+                    rdfs:comment "Number of reviews" .
+
+
+###  http://www.semanticweb.org/halaltourism#hasNutritionalInfo
+:hasNutritionalInfo rdf:type owl:DatatypeProperty ;
+                    rdfs:domain :FoodAndBeverage ;
+                    rdfs:range xsd:string ;
+                    rdfs:comment "Nutritional information of the food product" .
+
+
+###  http://www.semanticweb.org/halaltourism#hasOnlineAvailability
+:hasOnlineAvailability rdf:type owl:DatatypeProperty ;
+                       rdfs:domain :FoodAndBeverage ,
+                                   :HalalProducts ,
+                                   :ServiceProviders ;
+                       rdfs:range xsd:string ;
+                       rdfs:comment "Online platforms where the product is sold" .
+
+
+###  http://www.semanticweb.org/halaltourism#hasOnlineShopping
+:hasOnlineShopping rdf:type owl:DatatypeProperty ;
+                   rdfs:domain :HalalRetailOutlets ;
+                   rdfs:range xsd:boolean ,
+                              xsd:string ;
+                   rdfs:comment "Online shopping availability information" ,
+                                "Whether the store offers online shopping" .
+
+
+###  http://www.semanticweb.org/halaltourism#hasOpeningHours
+:hasOpeningHours rdf:type owl:DatatypeProperty ;
+                 rdfs:domain :HalalRetailOutlets ,
+                             [ rdf:type owl:Class ;
+                               owl:unionOf ( :FoodAndBeverage
+                                             :HalalRetailOutlets
+                                             :Mosques
+                                             :MuslimFriendlyAttractions
+                                           )
+                             ] ,
+                             [ rdf:type owl:Class ;
+                               owl:unionOf ( :FoodAndBeverage
+                                             :Mosques
+                                             :MuslimFriendlyAttractions
+                                           )
+                             ] ;
+                 rdfs:range xsd:string ;
+                 rdfs:comment "Opening hours of the halal retail outlet" ,
+                              "The opening hours of the entity" .
+
+
+###  http://www.semanticweb.org/halaltourism#hasOperatingDays
+:hasOperatingDays rdf:type owl:DatatypeProperty ;
+                  rdfs:domain :ServiceProviders ;
+                  rdfs:range xsd:string ;
+                  rdfs:comment "Days of operation" .
+
+
+###  http://www.semanticweb.org/halaltourism#hasOriginalAddress
+:hasOriginalAddress rdf:type owl:DatatypeProperty ;
+                    rdfs:domain :HalalRetailOutlets ;
+                    rdfs:range xsd:string ;
+                    rdfs:comment "Original address from source data" .
+
+
+###  http://www.semanticweb.org/halaltourism#hasOriginalCategories
+:hasOriginalCategories rdf:type owl:DatatypeProperty ;
+                       rdfs:domain :FoodAndBeverage ,
+                                   :HalalProducts ;
+                       rdfs:range xsd:string ;
+                       rdfs:comment "Original categories from source system" .
+
+
+###  http://www.semanticweb.org/halaltourism#hasOriginalCuisineType
+:hasOriginalCuisineType rdf:type owl:DatatypeProperty ;
+                        rdfs:domain :HalalRetailOutlets ;
+                        rdfs:range xsd:string ;
+                        rdfs:comment "Original cuisine type from source data" .
+
+
+###  http://www.semanticweb.org/halaltourism#hasOriginalDescription
+:hasOriginalDescription rdf:type owl:DatatypeProperty ;
+                        rdfs:domain :HalalRetailOutlets ;
+                        rdfs:range xsd:string ;
+                        rdfs:comment "Original description from source data" .
+
+
+###  http://www.semanticweb.org/halaltourism#hasOriginalImageAlt
+:hasOriginalImageAlt rdf:type owl:DatatypeProperty ;
+                     rdfs:domain :FoodAndBeverage ,
+                                 :HalalProducts ;
+                     rdfs:range xsd:string ;
+                     rdfs:comment "Original image alt text from source system" .
+
+
+###  http://www.semanticweb.org/halaltourism#hasOriginalImageUrl
+:hasOriginalImageUrl rdf:type owl:DatatypeProperty ;
+                     rdfs:domain :FoodAndBeverage ,
+                                 :HalalProducts ;
+                     rdfs:range xsd:anyURI ;
+                     rdfs:comment "Original image URL from source system" .
+
+
+###  http://www.semanticweb.org/halaltourism#hasOriginalIsHalalCertified
+:hasOriginalIsHalalCertified rdf:type owl:DatatypeProperty ;
+                             rdfs:domain :FoodAndBeverage ,
+                                         :HalalProducts ;
+                             rdfs:range xsd:boolean ;
+                             rdfs:comment "Original halal certification status from source" .
+
+
+###  http://www.semanticweb.org/halaltourism#hasOriginalName
+:hasOriginalName rdf:type owl:DatatypeProperty ;
+                 rdfs:domain :FoodAndBeverage ,
+                             :HalalProducts ,
+                             :HalalRetailOutlets ;
+                 rdfs:range xsd:string ;
+                 rdfs:comment "Original name from source data" ,
+                              "Original product name from source system" .
+
+
+###  http://www.semanticweb.org/halaltourism#hasOriginalProductId
+:hasOriginalProductId rdf:type owl:DatatypeProperty ,
+                               owl:FunctionalProperty ;
+                      rdfs:domain :FoodAndBeverage ,
+                                  :HalalProducts ;
+                      rdfs:range xsd:integer ;
+                      rdfs:comment "Original product ID from source system" .
+
+
+###  http://www.semanticweb.org/halaltourism#hasOriginalSourcePage
+:hasOriginalSourcePage rdf:type owl:DatatypeProperty ;
+                       rdfs:domain :FoodAndBeverage ,
+                                   :HalalProducts ;
+                       rdfs:range xsd:anyURI ;
+                       rdfs:comment "Original source page URL" .
+
+
+###  http://www.semanticweb.org/halaltourism#hasOriginalUrl
+:hasOriginalUrl rdf:type owl:DatatypeProperty ;
+                rdfs:domain :FoodAndBeverage ,
+                            :HalalProducts ,
+                            :HalalRetailOutlets ;
+                rdfs:range xsd:anyURI ;
+                rdfs:comment "Original URL from source data" ,
+                             "Original product URL from source system" .
+
+
+###  http://www.semanticweb.org/halaltourism#hasPackageCode
+:hasPackageCode rdf:type owl:DatatypeProperty ,
+                         owl:FunctionalProperty ;
+                rdfs:domain :HalalTourismActivities ;
+                rdfs:range xsd:string ;
+                rdfs:comment "Unique package identification code" .
+
+
+###  http://www.semanticweb.org/halaltourism#hasPackagedGoods
+:hasPackagedGoods rdf:type owl:DatatypeProperty ;
+                  rdfs:domain :HalalRetailOutlets ;
+                  rdfs:range xsd:string ;
+                  rdfs:comment "Packaged goods availability information" .
+
+
+###  http://www.semanticweb.org/halaltourism#hasPackaging
+:hasPackaging rdf:type owl:DatatypeProperty ;
+              rdfs:domain :FoodAndBeverage ,
+                          :HalalProducts ;
+              rdfs:range xsd:string ;
+              rdfs:comment "Type and description of product packaging" .
+
+
+###  http://www.semanticweb.org/halaltourism#hasParkingAvailability
+:hasParkingAvailability rdf:type owl:DatatypeProperty ;
+                        rdfs:domain :HalalRetailOutlets ;
+                        rdfs:range xsd:string ;
+                        rdfs:comment "Parking availability information" .
+
+
+###  http://www.semanticweb.org/halaltourism#hasPaymentMethods
+:hasPaymentMethods rdf:type owl:DatatypeProperty ;
+                   rdfs:domain :HalalCertifiedRestaurants ,
+                               :HalalRetailOutlets ,
+                               :MuslimFriendlyHotels ,
+                               :MuslimFriendlyRestaurants ,
+                               :ServiceProviders ,
+                               :Shopping ,
+                               [ rdf:type owl:Class ;
+                                 owl:unionOf ( :HalalRetailOutlets
+                                               :ServiceProviders
+                                             )
+                               ] ;
+                   rdfs:range xsd:string ;
+                   rdfs:comment "Accepted payment methods" ,
+                                "Payment methods accepted by the establishment" ,
+                                "Payment methods accepted by the halal retail outlet" .
+
+
+###  http://www.semanticweb.org/halaltourism#hasPhoneNumber
+:hasPhoneNumber rdf:type owl:DatatypeProperty ;
+                rdfs:domain :ServiceProviders ;
+                rdfs:range xsd:string ;
+                rdfs:comment "Contact phone number" .
+
+
+###  http://www.semanticweb.org/halaltourism#hasPhotos
+:hasPhotos rdf:type owl:DatatypeProperty ;
+           rdfs:domain :HalalCertifiedRestaurants ,
+                       :MuslimFriendlyHotels ,
+                       :MuslimFriendlyRestaurants ,
+                       :Shopping ;
+           rdfs:range xsd:string ;
+           rdfs:comment "URLs or descriptions of photos of the establishment" .
+
+
+###  http://www.semanticweb.org/halaltourism#hasPrayerSchedule
+:hasPrayerSchedule rdf:type owl:DatatypeProperty ;
+                   rdfs:domain :Mosques ;
+                   rdfs:range xsd:string ;
+                   rdfs:comment "Detailed prayer schedule" .
+
+
+###  http://www.semanticweb.org/halaltourism#hasPrayerTimes
+:hasPrayerTimes rdf:type owl:DatatypeProperty ;
+                rdfs:domain :Mosques ;
+                rdfs:range xsd:string ;
+                rdfs:comment "Prayer times for the mosque" .
+
+
+###  http://www.semanticweb.org/halaltourism#hasPriceRange
+:hasPriceRange rdf:type owl:DatatypeProperty ;
+               rdfs:domain :HalalRetailOutlets ,
+                           [ rdf:type owl:Class ;
+                             owl:unionOf ( :Accommodation
+                                           :FoodAndBeverage
+                                           :HalalProducts
+                                           :HalalRetailOutlets
+                                           :HalalTourismActivities
+                                         )
+                           ] ,
+                           [ rdf:type owl:Class ;
+                             owl:unionOf ( :Accommodation
+                                           :FoodAndBeverage
+                                           :HalalTourismActivities
+                                         )
+                           ] ;
+               rdfs:range xsd:string ;
+               rdfs:comment "Price range information for products" ,
+                            "The price range of the entity" .
+
+
+###  http://www.semanticweb.org/halaltourism#hasPrimaryCategory
+:hasPrimaryCategory rdf:type owl:DatatypeProperty ;
+                    rdfs:domain :DestinationsAndAttractions ,
+                                :FoodAndBeverage ,
+                                :HalalProducts ;
+                    rdfs:range xsd:string ;
+                    rdfs:comment "Primary category classification" .
+
+
+###  http://www.semanticweb.org/halaltourism#hasProductCode
+:hasProductCode rdf:type owl:DatatypeProperty ,
+                         owl:FunctionalProperty ;
+                rdfs:domain :FoodAndBeverage ,
+                            :HalalProducts ;
+                rdfs:range xsd:string ;
+                rdfs:comment "Unique identifier code for the product" .
+
+
+###  http://www.semanticweb.org/halaltourism#hasProductType
+:hasProductType rdf:type owl:DatatypeProperty ;
+                rdfs:domain :FoodAndBeverage ,
+                            :HalalProducts ;
+                rdfs:range xsd:string ;
+                rdfs:comment "Type classification of the product" .
+
+
+###  http://www.semanticweb.org/halaltourism#hasProductVariations
+:hasProductVariations rdf:type owl:DatatypeProperty ;
+                      rdfs:domain :FoodAndBeverage ,
+                                  :HalalProducts ;
+                      rdfs:range xsd:string ;
+                      rdfs:comment "Available variations of the product" .
+
+
+###  http://www.semanticweb.org/halaltourism#hasProducts
+:hasProducts rdf:type owl:DatatypeProperty ;
+             rdfs:domain :Shopping ;
+             rdfs:range xsd:string ;
+             rdfs:comment "Products available at the store" .
+
+
+###  http://www.semanticweb.org/halaltourism#hasPublicTransportAccess
+:hasPublicTransportAccess rdf:type owl:DatatypeProperty ;
+                          rdfs:domain :HalalRetailOutlets ;
+                          rdfs:range xsd:string ;
+                          rdfs:comment "Public transportation access information" .
+
+
+###  http://www.semanticweb.org/halaltourism#hasQiblaDirection
+:hasQiblaDirection rdf:type owl:DatatypeProperty ;
+                   rdfs:domain [ rdf:type owl:Class ;
+                                 owl:unionOf ( :Accommodation
+                                               :PrayerRooms
+                                             )
+                               ] ;
+                   rdfs:range xsd:decimal ;
+                   rdfs:comment "Direction of Qibla in degrees" .
+
+
+###  http://www.semanticweb.org/halaltourism#hasQualityStandards
+:hasQualityStandards rdf:type owl:DatatypeProperty ;
+                     rdfs:domain :FoodAndBeverage ,
+                                 :HalalProducts ,
+                                 :ServiceProviders ;
+                     rdfs:range xsd:string ;
+                     rdfs:comment "Quality standards maintained by the entity" .
+
+
+###  http://www.semanticweb.org/halaltourism#hasRating
+:hasRating rdf:type owl:DatatypeProperty ;
+           rdfs:domain [ rdf:type owl:Class ;
+                         owl:unionOf ( :HalalCertifiedRestaurants
+                                       :HalalProducts
+                                       :HalalRetailOutlets
+                                       :MuslimFriendlyAttractions
+                                       :MuslimFriendlyHotels
+                                     )
+                       ] ,
+                       [ rdf:type owl:Class ;
+                         owl:unionOf ( :HalalCertifiedRestaurants
+                                       :MuslimFriendlyAttractions
+                                       :MuslimFriendlyHotels
+                                     )
+                       ] ;
+           rdfs:range xsd:decimal ;
+           rdfs:comment "The rating of the entity" .
+
+
+###  http://www.semanticweb.org/halaltourism#hasRatings
+:hasRatings rdf:type owl:DatatypeProperty ;
+            rdfs:domain :HalalCertifiedRestaurants ,
+                        :HalalRetailOutlets ,
+                        :MuslimFriendlyHotels ,
+                        :MuslimFriendlyRestaurants ,
+                        :Shopping ;
+            rdfs:range xsd:string ;
+            rdfs:comment "Ratings of the establishment" ,
+                         "Store ratings and scores" .
+
+
+###  http://www.semanticweb.org/halaltourism#hasRefundPolicy
+:hasRefundPolicy rdf:type owl:DatatypeProperty ;
+                 rdfs:domain :ServiceProviders ;
+                 rdfs:range xsd:string ;
+                 rdfs:comment "Refund policy details" .
+
+
+###  http://www.semanticweb.org/halaltourism#hasRegistrationDeadline
+:hasRegistrationDeadline rdf:type owl:DatatypeProperty ;
+                         rdfs:domain :HalalTourismActivities ;
+                         rdfs:range xsd:date ;
+                         rdfs:comment "Registration deadline for activities" .
+
+
+###  http://www.semanticweb.org/halaltourism#hasReligiousCompliance
+:hasReligiousCompliance rdf:type owl:DatatypeProperty ;
+                        rdfs:domain :FoodAndBeverage ,
+                                    :HalalProducts ,
+                                    :ServiceProviders ;
+                        rdfs:range xsd:string ;
+                        rdfs:comment "Religious requirement adherence details" .
+
+
+###  http://www.semanticweb.org/halaltourism#hasReservationInfo
+:hasReservationInfo rdf:type owl:DatatypeProperty ;
+                    rdfs:domain :HalalCertifiedRestaurants ,
+                                :MuslimFriendlyRestaurants ;
+                    rdfs:range xsd:string ;
+                    rdfs:comment "Information about making reservations at the restaurant" .
+
+
+###  http://www.semanticweb.org/halaltourism#hasRetailLocations
+:hasRetailLocations rdf:type owl:DatatypeProperty ;
+                    rdfs:domain :FoodAndBeverage ,
+                                :HalalProducts ;
+                    rdfs:range xsd:string ;
+                    rdfs:comment "Physical retail stores where the product is available" .
+
+
+###  http://www.semanticweb.org/halaltourism#hasReviewScore
+:hasReviewScore rdf:type owl:DatatypeProperty ;
+                rdfs:domain [ rdf:type owl:Class ;
+                              owl:unionOf ( :Accommodation
+                                            :FoodAndBeverage
+                                            :MuslimFriendlyAttractions
+                                          )
+                            ] ;
+                rdfs:range xsd:decimal ;
+                rdfs:comment "Average review score" .
+
+
+###  http://www.semanticweb.org/halaltourism#hasReviews
+:hasReviews rdf:type owl:DatatypeProperty ;
+            rdfs:domain :HalalCertifiedRestaurants ,
+                        :HalalRetailOutlets ,
+                        :Mosques ,
+                        :MuslimFriendlyHotels ,
+                        :Shopping ,
+                        [ rdf:type owl:Class ;
+                          owl:unionOf ( :HalalCertifiedRestaurants
+                                        :HalalProducts
+                                        :HalalRetailOutlets
+                                        :Mosques
+                                        :MuslimFriendlyHotels
+                                        :Shopping
+                                      )
+                        ] ;
+            rdfs:range xsd:string ;
+            rdfs:comment "Customer reviews and feedback" ,
+                         "Reviews of the facility from visitors" .
+
+
+###  http://www.semanticweb.org/halaltourism#hasRoomCount
+:hasRoomCount rdf:type owl:DatatypeProperty ;
+              rdfs:domain :Accommodation ;
+              rdfs:range xsd:integer ;
+              rdfs:comment "Total number of rooms" .
+
+
+###  http://www.semanticweb.org/halaltourism#hasRoomTypes
+:hasRoomTypes rdf:type owl:DatatypeProperty ;
+              rdfs:domain :Accommodation ,
+                          :MuslimFriendlyHotels ,
+                          :ShariahCompliantHotels ;
+              rdfs:range xsd:string ;
+              rdfs:comment "Available room types" ,
+                           "Types of rooms available at the hotel" .
+
+
+###  http://www.semanticweb.org/halaltourism#hasSeasonalAvailability
+:hasSeasonalAvailability rdf:type owl:DatatypeProperty ;
+                         rdfs:domain :HalalTourismActivities ;
+                         rdfs:range xsd:string ;
+                         rdfs:comment "Seasonal availability information" .
+
+
+###  http://www.semanticweb.org/halaltourism#hasSeasonalProducts
+:hasSeasonalProducts rdf:type owl:DatatypeProperty ;
+                     rdfs:domain :HalalRetailOutlets ;
+                     rdfs:range xsd:string ;
+                     rdfs:comment "Seasonal products and availability" .
+
+
+###  http://www.semanticweb.org/halaltourism#hasSeasonality
+:hasSeasonality rdf:type owl:DatatypeProperty ;
+                rdfs:domain :HalalFashion ;
+                rdfs:range xsd:string ;
+                rdfs:comment "Seasonal suitability (summer, winter, all-season)" .
+
+
+###  http://www.semanticweb.org/halaltourism#hasSecondaryCategories
+:hasSecondaryCategories rdf:type owl:DatatypeProperty ;
+                        rdfs:domain :DestinationsAndAttractions ,
+                                    :FoodAndBeverage ,
+                                    :HalalProducts ;
+                        rdfs:range xsd:string ;
+                        rdfs:comment "Additional category classifications" .
+
+
+###  http://www.semanticweb.org/halaltourism#hasSecurityFeatures
+:hasSecurityFeatures rdf:type owl:DatatypeProperty ;
+                     rdfs:domain :FacilitiesAndInfrastructures ;
+                     rdfs:range xsd:string ;
+                     rdfs:comment "Security features and measures" .
+
+
+###  http://www.semanticweb.org/halaltourism#hasServiceHours
+:hasServiceHours rdf:type owl:DatatypeProperty ;
+                 rdfs:domain :ServiceProviders ;
+                 rdfs:range xsd:string ;
+                 rdfs:comment "Hours of service operation" .
+
+
+###  http://www.semanticweb.org/halaltourism#hasServicesOffered
+:hasServicesOffered rdf:type owl:DatatypeProperty ;
+                    rdfs:domain :HalalRetailOutlets ;
+                    rdfs:range xsd:string ;
+                    rdfs:comment "Services offered by the halal retail outlet" ,
+                                 "Services provided by the store" .
+
+
+###  http://www.semanticweb.org/halaltourism#hasShariahComplianceLevel
+:hasShariahComplianceLevel rdf:type owl:DatatypeProperty ;
+                           rdfs:domain :ServiceProviders ;
+                           rdfs:range xsd:string ;
+                           rdfs:comment "Level of Shariah compliance" .
+
+
+###  http://www.semanticweb.org/halaltourism#hasShelfLife
+:hasShelfLife rdf:type owl:DatatypeProperty ;
+              rdfs:domain :FoodAndBeverage ,
+                          :HalalProducts ;
+              rdfs:range xsd:duration ;
+              rdfs:comment "Product shelf life duration" .
+
+
+###  http://www.semanticweb.org/halaltourism#hasShippingInfo
+:hasShippingInfo rdf:type owl:DatatypeProperty ;
+                 rdfs:domain :FoodAndBeverage ,
+                             :HalalProducts ,
+                             :ServiceProviders ;
+                 rdfs:range xsd:string ;
+                 rdfs:comment "Shipping and delivery information" .
+
+
+###  http://www.semanticweb.org/halaltourism#hasSimilarProducts
+:hasSimilarProducts rdf:type owl:DatatypeProperty ;
+                    rdfs:domain :FoodAndBeverage ,
+                                :HalalProducts ;
+                    rdfs:range xsd:string ;
+                    rdfs:comment "Similar or related products" .
+
+
+###  http://www.semanticweb.org/halaltourism#hasSimilarRestaurants
+:hasSimilarRestaurants rdf:type owl:DatatypeProperty ;
+                       rdfs:domain :FoodAndBeverage ;
+                       rdfs:range xsd:string ;
+                       rdfs:comment "Similar halal restaurants information (as text)" .
+
+
+###  http://www.semanticweb.org/halaltourism#hasSize
+:hasSize rdf:type owl:DatatypeProperty ;
+         rdfs:domain :HalalFashion ;
+         rdfs:range xsd:string ;
+         rdfs:comment "Clothing or accessory size (XS, S, M, L, XL, etc.)" .
+
+
+###  http://www.semanticweb.org/halaltourism#hasSocialMedia
+:hasSocialMedia rdf:type owl:DatatypeProperty ;
+                rdfs:domain :HalalRetailOutlets ;
+                rdfs:range xsd:string ;
+                rdfs:comment "Social media presence and links" .
+
+
+###  http://www.semanticweb.org/halaltourism#hasSourcingDetails
+:hasSourcingDetails rdf:type owl:DatatypeProperty ;
+                    rdfs:domain :FoodAndBeverage ,
+                                :HalalProducts ;
+                    rdfs:range xsd:string ;
+                    rdfs:comment "Information about how the product is sourced" .
+
+
+###  http://www.semanticweb.org/halaltourism#hasSpecialFeatures
+:hasSpecialFeatures rdf:type owl:DatatypeProperty ;
+                    rdfs:domain :FoodAndBeverage ,
+                                :HalalProducts ,
+                                :ServiceProviders ;
+                    rdfs:range xsd:string ;
+                    rdfs:comment "Unique selling points or special features" .
+
+
+###  http://www.semanticweb.org/halaltourism#hasSpecialOffers
+:hasSpecialOffers rdf:type owl:DatatypeProperty ;
+                  rdfs:domain :HalalRetailOutlets ;
+                  rdfs:range xsd:string ;
+                  rdfs:comment "Special offers and promotional information" .
+
+
+###  http://www.semanticweb.org/halaltourism#hasSpecialRequirements
+:hasSpecialRequirements rdf:type owl:DatatypeProperty ;
+                        rdfs:domain :HalalTourismActivities ;
+                        rdfs:range xsd:string ;
+                        rdfs:comment "Special requirements for activities" .
+
+
+###  http://www.semanticweb.org/halaltourism#hasSpecialties
+:hasSpecialties rdf:type owl:DatatypeProperty ;
+                rdfs:domain :HalalCertifiedRestaurants ,
+                            :MuslimFriendlyRestaurants ,
+                            :Shopping ;
+                rdfs:range xsd:string ;
+                rdfs:comment "Specialties of the establishment" .
+
+
+###  http://www.semanticweb.org/halaltourism#hasSpicesAndSeasonings
+:hasSpicesAndSeasonings rdf:type owl:DatatypeProperty ;
+                        rdfs:domain :HalalRetailOutlets ;
+                        rdfs:range xsd:string ;
+                        rdfs:comment "Spices and seasonings availability information" .
+
+
+###  http://www.semanticweb.org/halaltourism#hasStarRating
+:hasStarRating rdf:type owl:DatatypeProperty ;
+               rdfs:domain :MuslimFriendlyHotels ,
+                           :ShariahCompliantHotels ;
+               rdfs:range xsd:string ;
+               rdfs:comment "The star rating of the hotel" .
+
+
+###  http://www.semanticweb.org/halaltourism#hasStockStatus
+:hasStockStatus rdf:type owl:DatatypeProperty ;
+                rdfs:domain :FoodAndBeverage ,
+                            :HalalProducts ;
+                rdfs:range xsd:string ;
+                rdfs:comment "Current stock availability status" .
+
+
+###  http://www.semanticweb.org/halaltourism#hasStorageInstructions
+:hasStorageInstructions rdf:type owl:DatatypeProperty ;
+                        rdfs:domain :FoodAndBeverage ,
+                                    :HalalProducts ;
+                        rdfs:range xsd:string ;
+                        rdfs:comment "Instructions for proper storage of the product" .
+
+
+###  http://www.semanticweb.org/halaltourism#hasStoreSize
+:hasStoreSize rdf:type owl:DatatypeProperty ;
+              rdfs:domain :HalalRetailOutlets ;
+              rdfs:range xsd:string ;
+              rdfs:comment "Size description of the store" .
+
+
+###  http://www.semanticweb.org/halaltourism#hasStoreType
+:hasStoreType rdf:type owl:DatatypeProperty ;
+              rdfs:domain :HalalRetailOutlets ;
+              rdfs:range xsd:string ;
+              rdfs:comment "Type of retail store (grocery store, supermarket, specialty store, etc.)" .
+
+
+###  http://www.semanticweb.org/halaltourism#hasSupplierInformation
+:hasSupplierInformation rdf:type owl:DatatypeProperty ;
+                        rdfs:domain :HalalRetailOutlets ;
+                        rdfs:range xsd:string ;
+                        rdfs:comment "Information about suppliers and supply chain" .
+
+
+###  http://www.semanticweb.org/halaltourism#hasTargetAudience
+:hasTargetAudience rdf:type owl:DatatypeProperty ;
+                   rdfs:domain :HalalProducts ,
+                               :HalalTourismActivities ,
+                               :ServiceProviders ;
+                   rdfs:range xsd:string ;
+                   rdfs:comment "Intended customer base or target audience" .
+
+
+###  http://www.semanticweb.org/halaltourism#hasTaxRegistrationNumber
+:hasTaxRegistrationNumber rdf:type owl:DatatypeProperty ,
+                                   owl:FunctionalProperty ;
+                          rdfs:domain :ServiceProviders ;
+                          rdfs:range xsd:string ;
+                          rdfs:comment "Tax registration number" .
+
+
+###  http://www.semanticweb.org/halaltourism#hasTermsAndConditions
+:hasTermsAndConditions rdf:type owl:DatatypeProperty ;
+                       rdfs:domain :ServiceProviders ;
+                       rdfs:range xsd:string ;
+                       rdfs:comment "Terms and conditions of service" .
+
+
+###  http://www.semanticweb.org/halaltourism#hasTimeZone
+:hasTimeZone rdf:type owl:DatatypeProperty ;
+             rdfs:domain :Destination ;
+             rdfs:range xsd:string ;
+             rdfs:comment "Time zone of the destination" .
+
+
+###  http://www.semanticweb.org/halaltourism#hasTourDuration
+:hasTourDuration rdf:type owl:DatatypeProperty ;
+                 rdfs:domain :HalalTourismActivities ;
+                 rdfs:range xsd:duration ;
+                 rdfs:comment "Duration of the tour or activity" .
+
+
+###  http://www.semanticweb.org/halaltourism#hasTransportCapacity
+:hasTransportCapacity rdf:type owl:DatatypeProperty ;
+                      rdfs:domain :TravelAndTransportation ;
+                      rdfs:range xsd:integer ;
+                      rdfs:comment "Transport capacity" .
+
+
+###  http://www.semanticweb.org/halaltourism#hasTypeOfHotel
+:hasTypeOfHotel rdf:type owl:DatatypeProperty ;
+                rdfs:domain :MuslimFriendlyHotels ,
+                            :ShariahCompliantHotels ;
+                rdfs:range xsd:string ;
+                rdfs:comment "The type or category of the hotel" .
+
+
+###  http://www.semanticweb.org/halaltourism#hasTypeOfMosque
+:hasTypeOfMosque rdf:type owl:DatatypeProperty ;
+                 rdfs:domain :Mosques ;
+                 rdfs:range xsd:string ;
+                 rdfs:comment "The type or category of the mosque" .
+
+
+###  http://www.semanticweb.org/halaltourism#hasTypeOfRestaurant
+:hasTypeOfRestaurant rdf:type owl:DatatypeProperty ;
+                     rdfs:domain :HalalCertifiedRestaurants ,
+                                 :MuslimFriendlyRestaurants ;
+                     rdfs:range xsd:string ;
+                     rdfs:comment "The type or category of the restaurant" .
+
+
+###  http://www.semanticweb.org/halaltourism#hasTypeOfStore
+:hasTypeOfStore rdf:type owl:DatatypeProperty ;
+                rdfs:domain :HalalRetailOutlets ,
+                            :Shopping ;
+                rdfs:range xsd:string ;
+                rdfs:comment "The type or category of the store" ,
+                             "Type of halal store (e.g., Halal Grocery Store, Mediterranean Halal Food Shop)" .
+
+
+###  http://www.semanticweb.org/halaltourism#hasUsageInstructions
+:hasUsageInstructions rdf:type owl:DatatypeProperty ;
+                      rdfs:domain :FoodAndBeverage ,
+                                  :HalalCosmetics ,
+                                  :HalalProducts ;
+                      rdfs:range xsd:string ;
+                      rdfs:comment "Instructions for proper use or consumption of the product" .
+
+
+###  http://www.semanticweb.org/halaltourism#hasValidityPeriod
+:hasValidityPeriod rdf:type owl:DatatypeProperty ;
+                   rdfs:domain :HalalCertifications ;
+                   rdfs:range xsd:duration ;
+                   rdfs:comment "Validity period of certification" .
+
+
+###  http://www.semanticweb.org/halaltourism#hasVehicleType
+:hasVehicleType rdf:type owl:DatatypeProperty ;
+                rdfs:domain :MuslimFriendlyGroundTransportation ;
+                rdfs:range xsd:string ;
+                rdfs:comment "Type of transport vehicle" .
+
+
+###  http://www.semanticweb.org/halaltourism#hasVendor
+:hasVendor rdf:type owl:DatatypeProperty ;
+           rdfs:domain :FoodAndBeverage ,
+                       :HalalProducts ;
+           rdfs:range xsd:string ;
+           rdfs:comment "Primary vendor or supplier of the product" .
+
+
+###  http://www.semanticweb.org/halaltourism#hasWebsite
+:hasWebsite rdf:type owl:DatatypeProperty ;
+            rdfs:domain :HalalRetailOutlets ,
+                        [ rdf:type owl:Class ;
+                          owl:unionOf ( :Destination
+                                        :HalalRetailOutlets
+                                        :MuslimFriendlyAttractions
+                                        :ServiceProviders
+                                      )
+                        ] ,
+                        [ rdf:type owl:Class ;
+                          owl:unionOf ( :Destination
+                                        :MuslimFriendlyAttractions
+                                        :ServiceProviders
+                                      )
+                        ] ;
+            rdfs:range xsd:anyURI ;
+            rdfs:comment "The website URL of the entity" ,
+                         "Website URL of the halal retail outlet" .
+
+
+###  http://www.semanticweb.org/halaltourism#hasWeight
+:hasWeight rdf:type owl:DatatypeProperty ;
+           rdfs:domain :FoodAndBeverage ,
+                       :HalalProducts ;
+           rdfs:range xsd:string ;
+           rdfs:comment "Weight of the product including packaging" .
+
+
+###  http://www.semanticweb.org/halaltourism#hasWifiAvailability
+:hasWifiAvailability rdf:type owl:DatatypeProperty ;
+                     rdfs:domain :FacilitiesAndInfrastructures ;
+                     rdfs:range xsd:boolean ;
+                     rdfs:comment "WiFi availability status" .
+
+
+###  http://www.semanticweb.org/halaltourism#isWheelchairAccessible
+:isWheelchairAccessible rdf:type owl:DatatypeProperty ;
+                        rdfs:domain :FacilitiesAndInfrastructures ;
+                        rdfs:range xsd:boolean ;
+                        rdfs:comment "Wheelchair accessibility status" .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.semanticweb.org/halaltourism#Accommodation
+:Accommodation rdf:type owl:Class ;
+               rdfs:subClassOf :HalalTourism ;
+               rdfs:comment "Lodging options that comply with Halal principles." .
+
+
+###  http://www.semanticweb.org/halaltourism#AccommodationProviders
+:AccommodationProviders rdf:type owl:Class ;
+                        rdfs:subClassOf :ServiceProviders ;
+                        rdfs:comment "Businesses that offer lodging services compliant with Halal principles." .
+
+
+###  http://www.semanticweb.org/halaltourism#AlcoholFreeEnvironments
+:AlcoholFreeEnvironments rdf:type owl:Class ;
+                         rdfs:subClassOf :IslamicEthicalAndCultural ;
+                         rdfs:comment "Spaces and experiences that do not involve the presence or consumption of alcohol." .
+
+
+###  http://www.semanticweb.org/halaltourism#AttractionOperators
+:AttractionOperators rdf:type owl:Class ;
+                     rdfs:subClassOf :ServiceProviders ;
+                     rdfs:comment "Organizations that manage and operate tourist attractions." .
+
+
+###  http://www.semanticweb.org/halaltourism#City
+:City rdf:type owl:Class ;
+      rdfs:subClassOf :Region ;
+      rdfs:comment "An urban area that may serve as a Halal tourism destination." .
+
+
+###  http://www.semanticweb.org/halaltourism#Country
+:Country rdf:type owl:Class ;
+         rdfs:subClassOf :Destination ;
+         rdfs:comment "A sovereign state that may serve as a Halal tourism destination." .
+
+
+###  http://www.semanticweb.org/halaltourism#Destination
+:Destination rdf:type owl:Class ;
+             rdfs:subClassOf :DestinationsAndAttractions ;
+             rdfs:comment "A place or location that serves as a Halal tourism destination." .
+
+
+###  http://www.semanticweb.org/halaltourism#DestinationAttributes
+:DestinationAttributes rdf:type owl:Class ;
+                       rdfs:subClassOf :Destination ;
+                       rdfs:comment "Characteristics and features of a destination that make it suitable for Halal tourism." .
+
+
+###  http://www.semanticweb.org/halaltourism#DestinationManagement
+:DestinationManagement rdf:type owl:Class ;
+                       rdfs:subClassOf :HalalTourismManagement ;
+                       rdfs:comment "Strategies for managing and developing Halal tourism destinations." .
+
+
+###  http://www.semanticweb.org/halaltourism#DestinationManagementOrganizations
+:DestinationManagementOrganizations rdf:type owl:Class ;
+                                    rdfs:subClassOf :Stakeholders ;
+                                    rdfs:comment "Organizations responsible for managing and promoting tourism destinations." .
+
+
+###  http://www.semanticweb.org/halaltourism#DestinationsAndAttractions
+:DestinationsAndAttractions rdf:type owl:Class ;
+                            rdfs:subClassOf :HalalTourism ;
+                            rdfs:comment "Places and sites of interest within the context of Halal tourism." .
+
+
+###  http://www.semanticweb.org/halaltourism#FacilitiesAndInfrastructures
+:FacilitiesAndInfrastructures rdf:type owl:Class ;
+                              rdfs:subClassOf :HalalTourism ;
+                              rdfs:comment "Physical structures and services that support Halal tourism." .
+
+
+###  http://www.semanticweb.org/halaltourism#FoodAndBeverage
+:FoodAndBeverage rdf:type owl:Class ;
+                 rdfs:subClassOf :HalalTourism ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty :hasDietaryRestrictions ;
+                                   owl:minCardinality "1"^^xsd:nonNegativeInteger
+                                 ] ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty :hasIngredients ;
+                                   owl:minCardinality "1"^^xsd:nonNegativeInteger
+                                 ] ;
+                 rdfs:comment "Food and drink options that comply with Halal dietary laws." .
+
+
+###  http://www.semanticweb.org/halaltourism#FoodAndBeverageProviders
+:FoodAndBeverageProviders rdf:type owl:Class ;
+                          rdfs:subClassOf :ServiceProviders ,
+                                          [ rdf:type owl:Restriction ;
+                                            owl:onProperty :adhereToStandards ;
+                                            owl:someValuesFrom :HalalStandards
+                                          ] ;
+                          rdfs:comment "Establishments that offer Halal food and beverage options." .
+
+
+###  http://www.semanticweb.org/halaltourism#GamblingFreeEnvironments
+:GamblingFreeEnvironments rdf:type owl:Class ;
+                          rdfs:subClassOf :IslamicEthicalAndCultural ;
+                          rdfs:comment "Areas and activities that do not involve or promote gambling." .
+
+
+###  http://www.semanticweb.org/halaltourism#GenderSegregatedAreas
+:GenderSegregatedAreas rdf:type owl:Class ;
+                       rdfs:subClassOf :DestinationAttributes ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty :hasCapacityFemale ;
+                                         owl:cardinality "1"^^xsd:nonNegativeInteger
+                                       ] ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty :hasCapacityMale ;
+                                         owl:cardinality "1"^^xsd:nonNegativeInteger
+                                       ] ;
+                       rdfs:comment "Areas or facilities that provide separate spaces for male and female visitors." .
+
+
+###  http://www.semanticweb.org/halaltourism#GenderSegregatedRecreationalFacilities
+:GenderSegregatedRecreationalFacilities rdf:type owl:Class ;
+                                        rdfs:subClassOf :FacilitiesAndInfrastructures ;
+                                        rdfs:comment "Recreational facilities that provide separate areas or times for male and female visitors." .
+
+
+###  http://www.semanticweb.org/halaltourism#HalalAccessories
+:HalalAccessories rdf:type owl:Class ;
+                  rdfs:subClassOf :HalalFashion ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty :hasAccessoryType ;
+                                    owl:cardinality "1"^^xsd:nonNegativeInteger
+                                  ] ;
+                  rdfs:comment "Fashion accessories that comply with Islamic principles" ,
+                               "Fashion accessories that comply with Islamic principles." .
+
+
+###  http://www.semanticweb.org/halaltourism#HalalCertificationAuthorities
+:HalalCertificationAuthorities rdf:type owl:Class ;
+                               rdfs:subClassOf :RegulatoryBodies ;
+                               rdfs:comment "Bodies that issue Halal certifications to businesses and products." .
+
+
+###  http://www.semanticweb.org/halaltourism#HalalCertifications
+:HalalCertifications rdf:type owl:Class ;
+                     rdfs:subClassOf :RegulationsAndCompliance ,
+                                     [ rdf:type owl:Restriction ;
+                                       owl:onProperty :hasCertificationDate ;
+                                       owl:someValuesFrom xsd:date
+                                     ] ,
+                                     [ rdf:type owl:Restriction ;
+                                       owl:onProperty :hasExpiryDate ;
+                                       owl:someValuesFrom xsd:date
+                                     ] ;
+                     rdfs:comment "Official recognition of compliance with Halal standards." .
+
+
+###  http://www.semanticweb.org/halaltourism#HalalCertifiedHotels
+:HalalCertifiedHotels rdf:type owl:Class ;
+                      rdfs:subClassOf :Accommodation ,
+                                      [ rdf:type owl:Restriction ;
+                                        owl:onProperty :implementsStandards ;
+                                        owl:someValuesFrom :HalalStandards
+                                      ] ,
+                                      [ rdf:type owl:Restriction ;
+                                        owl:onProperty :hasHalalCertificationAuthority ;
+                                        owl:cardinality "1"^^xsd:nonNegativeInteger
+                                      ] ;
+                      rdfs:comment "Hotels that have obtained official Halal certification for their services." .
+
+
+###  http://www.semanticweb.org/halaltourism#HalalCertifiedRestaurants
+:HalalCertifiedRestaurants rdf:type owl:Class ;
+                           rdfs:subClassOf :FoodAndBeverage ,
+                                           [ rdf:type owl:Restriction ;
+                                             owl:onProperty :hasCertificationDate ;
+                                             owl:cardinality "1"^^xsd:nonNegativeInteger
+                                           ] ,
+                                           [ rdf:type owl:Restriction ;
+                                             owl:onProperty :hasHalalCertificationAuthority ;
+                                             owl:cardinality "1"^^xsd:nonNegativeInteger
+                                           ] ;
+                           rdfs:comment "Restaurants that have obtained official Halal certification for their food and practices." .
+
+
+###  http://www.semanticweb.org/halaltourism#HalalClothing
+:HalalClothing rdf:type owl:Class ;
+               rdfs:subClassOf :HalalFashion ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :hasClothingType ;
+                                 owl:cardinality "1"^^xsd:nonNegativeInteger
+                               ] ;
+               rdfs:comment "Clothing items that meet Islamic modesty requirements and cultural preferences." .
+
+
+###  http://www.semanticweb.org/halaltourism#HalalCosmetics
+:HalalCosmetics rdf:type owl:Class ;
+                rdfs:subClassOf :HalalProducts ;
+                rdfs:comment "Beauty and personal care products that comply with Islamic principles." .
+
+
+###  http://www.semanticweb.org/halaltourism#HalalFashion
+:HalalFashion rdf:type owl:Class ;
+              rdfs:subClassOf :HalalProducts ;
+              rdfs:comment "Fashion items and accessories that comply with Islamic principles and modesty requirements." .
+
+
+###  http://www.semanticweb.org/halaltourism#HalalFood
+:HalalFood rdf:type owl:Class ;
+           rdfs:subClassOf :FoodAndBeverage ;
+           rdfs:comment "Food that is prepared and served according to Islamic dietary laws." .
+
+
+###  http://www.semanticweb.org/halaltourism#HalalFriendlyDestinations
+:HalalFriendlyDestinations rdf:type owl:Class ;
+                           rdfs:subClassOf :DestinationAttributes ;
+                           rdfs:comment "Destinations that accommodate Islamic principles and Muslim travelers' needs." .
+
+
+###  http://www.semanticweb.org/halaltourism#HalalProducts
+:HalalProducts rdf:type owl:Class ;
+               rdfs:subClassOf :Shopping ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :hasHalalCertificationStatus ;
+                                 owl:cardinality "1"^^xsd:nonNegativeInteger
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :hasProductCode ;
+                                 owl:cardinality "1"^^xsd:nonNegativeInteger
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :hasProductType ;
+                                 owl:cardinality "1"^^xsd:nonNegativeInteger
+                               ] ;
+               rdfs:comment "Goods and services that comply with Islamic law and are permissible for use by Muslims." .
+
+
+###  http://www.semanticweb.org/halaltourism#HalalRetailOutlets
+:HalalRetailOutlets rdf:type owl:Class ;
+                    rdfs:subClassOf :ServiceProviders ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty :sellsProduct ;
+                                      owl:minCardinality "1"^^xsd:nonNegativeInteger
+                                    ] ;
+                    rdfs:comment "Retail establishments that provide halal products and services to Muslim customers." .
+
+
+###  http://www.semanticweb.org/halaltourism#HalalSpecialtyStores
+:HalalSpecialtyStores rdf:type owl:Class ;
+                      rdfs:subClassOf :HalalRetailOutlets ;
+                      rdfs:comment "Specialized retail stores focusing on specific categories of halal products." .
+
+
+###  http://www.semanticweb.org/halaltourism#HalalStandards
+:HalalStandards rdf:type owl:Class ;
+                rdfs:subClassOf :RegulationsAndCompliance ;
+                rdfs:comment "Established criteria for Halal compliance in various aspects of tourism." .
+
+
+###  http://www.semanticweb.org/halaltourism#HalalSupermarkets
+:HalalSupermarkets rdf:type owl:Class ;
+                   rdfs:subClassOf :HalalRetailOutlets ;
+                   rdfs:comment "Large-scale retail stores offering comprehensive halal product selections." .
+
+
+###  http://www.semanticweb.org/halaltourism#HalalSwimmingSuits
+:HalalSwimmingSuits rdf:type owl:Class ;
+                    rdfs:subClassOf :HalalClothing ,
+                                    :HalalProducts ;
+                    rdfs:comment "Swimwear designed to meet Islamic modesty requirements." .
+
+
+###  http://www.semanticweb.org/halaltourism#HalalTourOperator
+:HalalTourOperator rdf:type owl:Class ;
+                   rdfs:subClassOf :ServiceProviders ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty :collaboratesWith ;
+                                     owl:minCardinality "1"^^xsd:nonNegativeInteger
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty :organizes ;
+                                     owl:minCardinality "1"^^xsd:nonNegativeInteger
+                                   ] ;
+                   rdfs:comment "Tour operators specializing in Halal-compliant travel packages and experiences." .
+
+
+###  http://www.semanticweb.org/halaltourism#HalalTourism
+:HalalTourism rdf:type owl:Class ;
+              rdfs:comment "Tourism services and activities that adhere to Islamic principles, catering primarily to Muslim travelers but also accessible to non-Muslims. This encompasses all aspects of travel that comply with Shariah law, including accommodation, food, activities, and facilities." .
+
+
+###  http://www.semanticweb.org/halaltourism#HalalTourismActivities
+:HalalTourismActivities rdf:type owl:Class ;
+                        rdfs:subClassOf :DestinationsAndAttractions ,
+                                        [ rdf:type owl:Restriction ;
+                                          owl:onProperty :hasTourDuration ;
+                                          owl:cardinality "1"^^xsd:nonNegativeInteger
+                                        ] ;
+                        rdfs:comment "Activities and experiences tailored for Muslim travelers that comply with Islamic principles." .
+
+
+###  http://www.semanticweb.org/halaltourism#HalalTourismManagement
+:HalalTourismManagement rdf:type owl:Class ;
+                        rdfs:subClassOf :HalalTourism ;
+                        rdfs:comment "Strategies and practices for managing Halal tourism operations and experiences." .
+
+
+###  http://www.semanticweb.org/halaltourism#HalalTourismWebsites
+:HalalTourismWebsites rdf:type owl:Class ;
+                      rdfs:subClassOf :InformationAndTechnology ;
+                      rdfs:comment "Websites providing information and services related to Halal tourism." .
+
+
+###  http://www.semanticweb.org/halaltourism#HalalTravelAgency
+:HalalTravelAgency rdf:type owl:Class ;
+                   rdfs:subClassOf :ServiceProviders ;
+                   rdfs:comment "Travel agencies that focus on providing Halal-compliant travel services." .
+
+
+###  http://www.semanticweb.org/halaltourism#InformationAndTechnology
+:InformationAndTechnology rdf:type owl:Class ;
+                          rdfs:subClassOf :HalalTourism ;
+                          rdfs:comment "Technological solutions and information systems supporting Halal tourism." .
+
+
+###  http://www.semanticweb.org/halaltourism#IslamicCulturalCenter
+:IslamicCulturalCenter rdf:type owl:Class ;
+                       rdfs:subClassOf :FacilitiesAndInfrastructures ;
+                       rdfs:comment "Centers dedicated to promoting and preserving Islamic culture and knowledge." .
+
+
+###  http://www.semanticweb.org/halaltourism#IslamicDressCode
+:IslamicDressCode rdf:type owl:Class ;
+                  rdfs:subClassOf :IslamicEthicalAndCultural ;
+                  rdfs:comment "Clothing and appearance guidelines based on Islamic principles." .
+
+
+###  http://www.semanticweb.org/halaltourism#IslamicEthicalAndCultural
+:IslamicEthicalAndCultural rdf:type owl:Class ;
+                           rdfs:subClassOf :HalalTourism ;
+                           rdfs:comment "Principles and practices related to Islamic ethics and culture in tourism." .
+
+
+###  http://www.semanticweb.org/halaltourism#IslamicGovernanceInstitutions
+:IslamicGovernanceInstitutions rdf:type owl:Class ;
+                               rdfs:subClassOf :RegulatoryBodies ;
+                               rdfs:comment "Institutions that provide guidance on Islamic principles and practices." .
+
+
+###  http://www.semanticweb.org/halaltourism#IslamicHeritageSites
+:IslamicHeritageSites rdf:type owl:Class ;
+                      rdfs:subClassOf :MuslimFriendlyAttractions ;
+                      rdfs:comment "Historical and cultural sites of significance to Islamic history and heritage." .
+
+
+###  http://www.semanticweb.org/halaltourism#IslamicHospitality
+:IslamicHospitality rdf:type owl:Class ;
+                    rdfs:subClassOf :IslamicEthicalAndCultural ;
+                    rdfs:comment "Principles and practices of hospitality aligned with Islamic values." .
+
+
+###  http://www.semanticweb.org/halaltourism#IslamicLifestyle
+:IslamicLifestyle rdf:type owl:Class ;
+                  rdfs:subClassOf :IslamicEthicalAndCultural ;
+                  rdfs:comment "Aspects of daily life and behavior aligned with Islamic principles." .
+
+
+###  http://www.semanticweb.org/halaltourism#IslamicMuseum
+:IslamicMuseum rdf:type owl:Class ;
+               rdfs:subClassOf :MuslimFriendlyAttractions ;
+               rdfs:comment "A museum dedicated to preserving and showcasing Islamic art, history, and culture." .
+
+
+###  http://www.semanticweb.org/halaltourism#Mosques
+:Mosques rdf:type owl:Class ;
+         rdfs:subClassOf :FacilitiesAndInfrastructures ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty :hasPrayerTimes ;
+                           owl:minCardinality "1"^^xsd:nonNegativeInteger
+                         ] ;
+         rdfs:comment "Places of worship for Muslims, often serving as community centers as well." .
+
+
+###  http://www.semanticweb.org/halaltourism#MuslimFriendlyAirlines
+:MuslimFriendlyAirlines rdf:type owl:Class ;
+                        rdfs:subClassOf :TravelAndTransportation ;
+                        rdfs:comment "Airlines that provide Halal food, prayer spaces, and other Muslim-friendly services." .
+
+
+###  http://www.semanticweb.org/halaltourism#MuslimFriendlyAirports
+:MuslimFriendlyAirports rdf:type owl:Class ;
+                        rdfs:subClassOf :TravelAndTransportation ;
+                        rdfs:comment "Airports with facilities and services catering to Muslim travelers' needs." .
+
+
+###  http://www.semanticweb.org/halaltourism#MuslimFriendlyAttractions
+:MuslimFriendlyAttractions rdf:type owl:Class ;
+                           rdfs:subClassOf :DestinationsAndAttractions ,
+                                           [ rdf:type owl:Restriction ;
+                                             owl:onProperty :provides ;
+                                             owl:someValuesFrom :HalalFood
+                                           ] ,
+                                           [ rdf:type owl:Restriction ;
+                                             owl:onProperty :hasContactInfo ;
+                                             owl:cardinality "1"^^xsd:nonNegativeInteger
+                                           ] ,
+                                           [ rdf:type owl:Restriction ;
+                                             owl:onProperty :hasOpeningHours ;
+                                             owl:cardinality "1"^^xsd:nonNegativeInteger
+                                           ] ;
+                           rdfs:comment "Attractions that cater to Muslim visitors, ensuring compliance with Islamic principles." .
+
+
+###  http://www.semanticweb.org/halaltourism#MuslimFriendlyBus
+:MuslimFriendlyBus rdf:type owl:Class ;
+                   rdfs:subClassOf :MuslimFriendlyGroundTransportation ;
+                   rdfs:comment "Bus services that cater to Muslim travelers' requirements." .
+
+
+###  http://www.semanticweb.org/halaltourism#MuslimFriendlyCruises
+:MuslimFriendlyCruises rdf:type owl:Class ;
+                       rdfs:subClassOf :TravelAndTransportation ;
+                       rdfs:comment "Cruise services that provide Halal food, prayer spaces, and other Muslim-friendly amenities." .
+
+
+###  http://www.semanticweb.org/halaltourism#MuslimFriendlyGroundTransportation
+:MuslimFriendlyGroundTransportation rdf:type owl:Class ;
+                                    rdfs:subClassOf :TravelAndTransportation ;
+                                    rdfs:comment "Ground transportation options that accommodate Muslim travelers' needs." .
+
+
+###  http://www.semanticweb.org/halaltourism#MuslimFriendlyHealthcareAndWellnessService
+:MuslimFriendlyHealthcareAndWellnessService rdf:type owl:Class ;
+                                            rdfs:subClassOf :HalalTourismActivities ;
+                                            rdfs:comment "Healthcare and wellness services that cater to Muslim needs and adhere to Islamic guidelines." .
+
+
+###  http://www.semanticweb.org/halaltourism#MuslimFriendlyHotels
+:MuslimFriendlyHotels rdf:type owl:Class ;
+                      rdfs:subClassOf :Accommodation ,
+                                      [ rdf:type owl:Restriction ;
+                                        owl:onProperty :hasAmenity ;
+                                        owl:someValuesFrom :QiblaDirectionIndicators
+                                      ] ,
+                                      [ rdf:type owl:Restriction ;
+                                        owl:onProperty :hasFeature ;
+                                        owl:someValuesFrom :PrayerRooms
+                                      ] ;
+                      rdfs:comment "Hotels that cater to Muslim travelers' needs without necessarily being fully Shariah-compliant." .
+
+
+###  http://www.semanticweb.org/halaltourism#MuslimFriendlyMobileApplications
+:MuslimFriendlyMobileApplications rdf:type owl:Class ;
+                                  rdfs:subClassOf :InformationAndTechnology ,
+                                                  [ rdf:type owl:Restriction ;
+                                                    owl:onProperty :hasLanguages ;
+                                                    owl:minCardinality "2"^^xsd:nonNegativeInteger
+                                                  ] ;
+                                  rdfs:comment "Mobile apps designed to assist Muslim travelers with various aspects of their journey." .
+
+
+###  http://www.semanticweb.org/halaltourism#MuslimFriendlyRestaurants
+:MuslimFriendlyRestaurants rdf:type owl:Class ;
+                           rdfs:subClassOf :FoodAndBeverage ;
+                           rdfs:comment "Restaurants that cater to Muslim dietary needs without necessarily being fully Halal certified." .
+
+
+###  http://www.semanticweb.org/halaltourism#MuslimFriendlyTouristDestinations
+:MuslimFriendlyTouristDestinations rdf:type owl:Class ;
+                                   rdfs:subClassOf :Destination ;
+                                   rdfs:comment "Destinations that cater specifically to Muslim travelers' needs and preferences." .
+
+
+###  http://www.semanticweb.org/halaltourism#MuslimFriendlyVan
+:MuslimFriendlyVan rdf:type owl:Class ;
+                   rdfs:subClassOf :MuslimFriendlyGroundTransportation ;
+                   rdfs:comment "Van services that accommodate Muslim travelers' needs." .
+
+
+###  http://www.semanticweb.org/halaltourism#MuslimGenAlphaTravelers
+:MuslimGenAlphaTravelers rdf:type owl:Class ;
+                         rdfs:subClassOf :MuslimTourists ;
+                         rdfs:comment "Muslim travelers belonging to Generation Alpha." .
+
+
+###  http://www.semanticweb.org/halaltourism#MuslimGenZTravelers
+:MuslimGenZTravelers rdf:type owl:Class ;
+                     rdfs:subClassOf :MuslimTourists ;
+                     rdfs:comment "Muslim travelers belonging to Generation Z." .
+
+
+###  http://www.semanticweb.org/halaltourism#MuslimMillennialTravelers
+:MuslimMillennialTravelers rdf:type owl:Class ;
+                           rdfs:subClassOf :MuslimTourists ;
+                           rdfs:comment "Muslim travelers belonging to the millennial generation." .
+
+
+###  http://www.semanticweb.org/halaltourism#MuslimTourists
+:MuslimTourists rdf:type owl:Class ;
+                rdfs:subClassOf :Tourists ;
+                rdfs:comment "Travelers who adhere to Islamic principles and seek Halal-compliant travel experiences." .
+
+
+###  http://www.semanticweb.org/halaltourism#MuslimWomenTravelers
+:MuslimWomenTravelers rdf:type owl:Class ;
+                      rdfs:subClassOf :MuslimTourists ;
+                      rdfs:comment "Female Muslim travelers with specific needs and preferences." .
+
+
+###  http://www.semanticweb.org/halaltourism#NonAlcoholicBeverages
+:NonAlcoholicBeverages rdf:type owl:Class ;
+                       rdfs:subClassOf :FoodAndBeverage ;
+                       rdfs:comment "Drinks that do not contain alcohol, suitable for Muslim consumption." .
+
+
+###  http://www.semanticweb.org/halaltourism#PrayerFacilitiesAtDestinations
+:PrayerFacilitiesAtDestinations rdf:type owl:Class ;
+                                rdfs:subClassOf :DestinationAttributes ;
+                                rdfs:comment "Dedicated spaces for prayer available at various locations within a destination." .
+
+
+###  http://www.semanticweb.org/halaltourism#PrayerRooms
+:PrayerRooms rdf:type owl:Class ;
+             rdfs:subClassOf :FacilitiesAndInfrastructures ;
+             rdfs:comment "Dedicated spaces for prayer, often found in various locations such as airports or shopping centers." .
+
+
+###  http://www.semanticweb.org/halaltourism#QiblaDirectionIndicators
+:QiblaDirectionIndicators rdf:type owl:Class ;
+                          rdfs:subClassOf :FacilitiesAndInfrastructures ;
+                          rdfs:comment "Devices or markings that indicate the direction of the Qibla for prayer." .
+
+
+###  http://www.semanticweb.org/halaltourism#Region
+:Region rdf:type owl:Class ;
+        rdfs:subClassOf :Country ;
+        rdfs:comment "A geographical area within a country or spanning multiple countries." .
+
+
+###  http://www.semanticweb.org/halaltourism#RegulationsAndCompliance
+:RegulationsAndCompliance rdf:type owl:Class ;
+                          rdfs:subClassOf :HalalTourism ;
+                          rdfs:comment "Rules, standards, and practices ensuring adherence to Islamic principles in tourism." .
+
+
+###  http://www.semanticweb.org/halaltourism#RegulatoryBodies
+:RegulatoryBodies rdf:type owl:Class ;
+                  rdfs:subClassOf :Stakeholders ;
+                  rdfs:comment "Organizations responsible for setting and enforcing standards in Halal tourism." .
+
+
+###  http://www.semanticweb.org/halaltourism#ServiceProviders
+:ServiceProviders rdf:type owl:Class ;
+                  rdfs:subClassOf :Stakeholders ;
+                  rdfs:comment "Organizations or individuals that offer services within the Halal tourism industry." .
+
+
+###  http://www.semanticweb.org/halaltourism#ServiceQuality
+:ServiceQuality rdf:type owl:Class ;
+                rdfs:subClassOf :HalalTourismManagement ;
+                rdfs:comment "Standards and practices ensuring high-quality service in Halal tourism." .
+
+
+###  http://www.semanticweb.org/halaltourism#ShariahCompliantHotels
+:ShariahCompliantHotels rdf:type owl:Class ;
+                        rdfs:subClassOf :Accommodation ;
+                        rdfs:comment "Hotels that strictly adhere to Islamic law in their operations and services." .
+
+
+###  http://www.semanticweb.org/halaltourism#ShariahLawCompliance
+:ShariahLawCompliance rdf:type owl:Class ;
+                      rdfs:subClassOf :RegulationsAndCompliance ;
+                      rdfs:comment "Adherence to Islamic law in tourism practices and services." .
+
+
+###  http://www.semanticweb.org/halaltourism#Shopping
+:Shopping rdf:type owl:Class ;
+          rdfs:subClassOf :HalalTourismActivities ;
+          rdfs:comment "Retail experiences and opportunities within Halal tourism destinations." .
+
+
+###  http://www.semanticweb.org/halaltourism#Stakeholders
+:Stakeholders rdf:type owl:Class ;
+              rdfs:subClassOf :HalalTourism ;
+              rdfs:comment "Individuals, groups, or organizations involved in or affected by Halal tourism." .
+
+
+###  http://www.semanticweb.org/halaltourism#SustainableHalalTourismPractices
+:SustainableHalalTourismPractices rdf:type owl:Class ;
+                                  rdfs:subClassOf :HalalTourismManagement ;
+                                  rdfs:comment "Environmentally and socially responsible practices within Halal tourism." .
+
+
+###  http://www.semanticweb.org/halaltourism#Tourists
+:Tourists rdf:type owl:Class ;
+          rdfs:subClassOf :Stakeholders ;
+          rdfs:comment "Individuals who travel for leisure or business purposes." .
+
+
+###  http://www.semanticweb.org/halaltourism#TransportationProviders
+:TransportationProviders rdf:type owl:Class ;
+                         rdfs:subClassOf :ServiceProviders ;
+                         rdfs:comment "Companies that provide transportation services for tourists." .
+
+
+###  http://www.semanticweb.org/halaltourism#TravelAndTransportation
+:TravelAndTransportation rdf:type owl:Class ;
+                         rdfs:subClassOf :HalalTourism ;
+                         rdfs:comment "Modes of travel and transportation services that cater to Muslim travelers." .
+
+
+###  http://www.semanticweb.org/halaltourism#WudhuFacilities
+:WudhuFacilities rdf:type owl:Class ;
+                 rdfs:subClassOf :FacilitiesAndInfrastructures ;
+                 rdfs:comment "Facilities for performing ablutions before prayer." .
+
+
+[ owl:minCardinality "1"^^xsd:nonNegativeInteger
+] .
+
+#################################################################
+#    Annotations
+#################################################################
+
+:hasNearbyMosques rdfs:comment "Information about nearby mosques" ,
+                                "Nearby mosques to the establishment" .
+
+
+###  Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/
